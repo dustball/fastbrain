@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
-  grunt.registerTask('debug',['exec:debug','exec:lldb']);
+  grunt.registerTask('debug',['exec:debug']);
 
   grunt.registerTask('default', ['exec:compile','exec:run','watch']);
 
