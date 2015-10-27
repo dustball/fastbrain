@@ -32,7 +32,8 @@ std::set<unsigned long int /* neuron number */> queued;
 void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors, unsigned int voltage[] ) {
     
     // printf("Nei Addy = %p\n", &my_neighbors);
-    printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
+    
+    // printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
     if (my_neighbors.size()<CONNECTIONS) { 
         // static std::random_device rd;
         // static std::mt19937 generator(rd());
@@ -55,21 +56,22 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
         }
     }
 
+    voltage[neuron] /= 2;
 
 }
 
 void maybe_fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors, unsigned int voltage[]) {
     
-    unsigned int ev = voltage[neuron];
+    unsigned int *ev = &voltage[neuron];
     
-    printf("Checking Neuron #%lu %c size:%lu eV:%u\n", neuron, kind, my_neighbors.size(), ev);
+     printf("Checking Neuron #%lu %c size:%lu eV:%u\n", neuron, kind, my_neighbors.size(), *ev);
     
-    if (ev>10) {
+    if (*ev>10) {
         fire(neuron, kind, my_neighbors, voltage);
     }
-    ev += 1;
+    *ev += 1;
     
-    voltage[neuron] = ev;
+    voltage[neuron] = *ev;
 }
 	
 unsigned int clamp(unsigned int f) {
@@ -167,7 +169,7 @@ int main() {
 	
 	clock_t start = clock(), diff;
 	
-	for (int ml=0; ml<3; ml++) {
+	for (int ml=0; ml<7; ml++) {
 	   
     	for (unsigned long int i=0; i<(unsigned long int)NEURONS; i++) {  
     	   process(kind[i], i, neighbors[i], voltage);
@@ -175,19 +177,21 @@ int main() {
     	diff = clock() - start;
         
         
-        std::map<unsigned int /* voltage */, unsigned long int /* neuron number */>::reverse_iterator it = queue.rbegin();
-        while (it != queue.rend()) {
+        while (!queue.empty()) {
             
-            std::map<unsigned int /* voltage */, unsigned long int /* neuron number */>::reverse_iterator it = queue.rbegin();
-            
+            std::map<unsigned int, unsigned long int>::reverse_iterator it = queue.rbegin();
+                        
             unsigned int v = it->first;
             unsigned long int n = it->second;
             
-           printf("DQ eV=%imV #%lu ..\n",v, n);
-    
-           queued.erase(n);
-           process(kind[n], n, neighbors[n], voltage);
-           it++;
+            printf("DQ eV=%imV #%lu ..\n",v, n);
+            
+            queued.erase(n);
+            queue.erase(std::next(it).base());
+            process(kind[n], n, neighbors[n], voltage);          
+            
+            // Restart queue from end again
+            it = queue.rbegin();
            
         }
         queue.clear();
