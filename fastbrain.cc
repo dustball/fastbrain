@@ -11,6 +11,7 @@
 #include <queue>
 #include <set>
 #include <map>
+#include "worldmap.cc"
 
 #define MIN 0
 #define MAX UINT_MAX
@@ -28,6 +29,7 @@
 
 std::multimap<unsigned int /* voltage */, unsigned long int /* neuron number */> queue;
 std::set<unsigned long int /* neuron number */> queued;
+worldmap wm;
  
 void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors, unsigned int voltage[] ) {
     
@@ -58,6 +60,16 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
 
     voltage[neuron] /= 2;
 
+}
+
+void make_connection(unsigned long int from, std::vector<unsigned int> &my_neighbors, unsigned long int to) {
+    
+    if (my_neighbors.size()<CONNECTIONS) { 
+        printf(" make_connection %lu -> %lu \n",from, to);  
+        unsigned long int target_neuron = rand() % NEURONS;
+        my_neighbors.push_back(to);
+    } 
+    
 }
 
 void maybe_fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors, unsigned int voltage[]) {
@@ -158,6 +170,7 @@ int main() {
     // memcpy(kind,"BFBB\0",5);
 	
 	
+	wm.initmap();
 	
     init_brain(kind,voltage,neighbors);
 	
@@ -187,7 +200,7 @@ int main() {
             printf("DQ eV=%imV #%lu ..\n",v, n);
             
             queued.erase(n);
-            queue.erase(std::next(it).base());
+            queue.erase(std::next(it).base()); 
             process(kind[n], n, neighbors[n], voltage);          
             
             // Restart queue from end again
@@ -195,6 +208,12 @@ int main() {
            
         }
         queue.clear();
+
+        int a = rand() % NEURONS;
+        int b = rand() % NEURONS;
+        make_connection(a,neighbors[a],b);
+        wm.showmap();        
+        
 
 	}
 
