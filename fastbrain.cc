@@ -189,16 +189,23 @@ int main() {
     // 	voltage[0] = 5;
     // 	voltage[1] = 3;
 
-    clock_t start = clock(), diff;
+    
 
-    for (int ml=0; ml<6; ml++) {
+    for (int ml=0; ml<1000; ml++) {
 
-        for (unsigned long int i=0; i<(unsigned long int)NEURONS; i++) {
-            process(kind[i], i, neighbors[i], voltage);
-        }
-        diff = clock() - start;
+//        for (unsigned long int i=0; i<(unsigned long int)NEURONS; i++) {
+//            process(kind[i], i, neighbors[i], voltage);
+//        }
 
+        wm.showmap();
+        
+        unsigned long int nueron = ws.process_request();
 
+        clock_t start = clock(), diff;
+        
+        printf("Process %ld\n",nueron);       
+        process(kind[nueron], nueron, neighbors[nueron], voltage);
+        
         while (!queue.empty()) {
 
             std::map<unsigned int, unsigned long int>::reverse_iterator it = queue.rbegin();
@@ -221,21 +228,18 @@ int main() {
         int a = rand() % NEURONS;
         int b = rand() % NEURONS;
         make_connection(a,neighbors[a],b);
-        wm.showmap();
-
-
-        unsigned long int nueron = ws.process_request();
-
-        printf("Process %ld\n",nueron);
-
+    
+        diff = clock() - start;
+        int msec = diff * 1000 / CLOCKS_PER_SEC;
+        printf("\n[%i] Time taken %d seconds %d milliseconds", ml, msec/1000, msec%1000);
+        printf("\nOK\n\n");    
+        
 
     }
 
+    printf("\n\n");
 
-    int msec = diff * 1000 / CLOCKS_PER_SEC;
-    //printf("voltage[0]=%u\n",voltage[0]);
-    printf("\nTime taken %d seconds %d milliseconds", msec/1000, msec%1000);
-    printf("\nOK\n\n");
+    
 
     free(voltage);
     free(kind);

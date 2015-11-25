@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
         },
         watch: {
-            files: ['fastbrain.cc','worldmap.cc'],
+            files: ['fastbrain.cc','worldmap.cc','webserver.cc'],
             tasks: ['exec:compile','exec:run']
         }
     });
@@ -40,6 +40,6 @@ module.exports = function(grunt) {
     grunt.registerTask('debug',['exec:debug']);
     grunt.registerTask('indent',['exec:indent']);
 
-    grunt.registerTask('default', ['exec:compile','exec:run','watch']);
+    grunt.registerTask('default', ['exec:compile','watch']);
 
 };

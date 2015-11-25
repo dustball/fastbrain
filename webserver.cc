@@ -82,7 +82,7 @@ class webserver {
                 perror("accept");
                 exit(1);
             }
-            if (!fork()) {
+            if (1 || !fork()) {
                 //close(sockfd);
                 if (read(new_fd, in, 3000) == -1) {
                     perror("recive");
@@ -102,7 +102,7 @@ class webserver {
                     if (ch == 'n') {
                         strcpy(sent, "HTTP/1.1  \n");
                         strcat(sent, "200 OK");
-                        strcat(sent, "\nServer: fastbrain 0.1\n");
+                        strcat(sent, "\nServer: fastbrain 0.1\nContent-Length: ");
                         strcat(sent, length);
                         strcat(sent, "Connection: close\nContent-Type: ");
                         strcat(sent, "text/html");
@@ -113,10 +113,11 @@ class webserver {
                         close(new_fd);
                         return neuron;
                     } else {
-                        strcpy(sent, "HTTP/1.1  \n");
-                        strcat(sent, "404 Not Found");
-                        strcat(sent, "\nServer: fastbrain 0.1\n");
-                        strcat(sent, "\nConnection: close\n");
+                        strcpy(sent, "HTTP/1.0 ");
+                        strcat(sent, "404 Not Found\nContent-Length:13");
+                        strcat(sent, "\nServer: fastbrain 0.1");
+                        strcat(sent, "\nConnection: close\n\n404 Not Found");
+                        write(new_fd, sent, strlen(sent));
                         close(new_fd);
                         continue;
                     }
