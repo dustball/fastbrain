@@ -12,6 +12,7 @@
 #include <set>
 #include <map>
 #include "worldmap.cc"
+#include "webserver.cc"
 
 #define MIN 0
 #define MAX UINT_MAX
@@ -30,12 +31,13 @@
 std::multimap<unsigned int /* voltage */, unsigned long int /* neuron number */> queue;
 std::set<unsigned long int /* neuron number */> queued;
 worldmap wm;
- 
+webserver ws;
+
 void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors, unsigned int voltage[] ) {
     
     // printf("Nei Addy = %p\n", &my_neighbors);
     
-    // printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
+    printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
     if (my_neighbors.size()<CONNECTIONS) { 
         // static std::random_device rd;
         // static std::mt19937 generator(rd());
@@ -59,6 +61,10 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
     }
 
     voltage[neuron] /= 2;
+    
+    if (neuron==0) {
+        wm.move_fwd();
+    }
 
 }
 
@@ -152,6 +158,9 @@ void init_brain(char kind[], unsigned int voltage[], std::vector<unsigned int> *
 }
 
 int main() { 
+    
+    ws.start_server();
+    
 	unsigned int *voltage = NULL;
 	if ((voltage = (unsigned int *) malloc(sizeof(unsigned int) * NEURONS)) == NULL) {
 		printf("unable to allocate voltage memory \n");
@@ -182,7 +191,7 @@ int main() {
 	
 	clock_t start = clock(), diff;
 	
-	for (int ml=0; ml<7; ml++) {
+	for (int ml=0; ml<6; ml++) {
 	   
     	for (unsigned long int i=0; i<(unsigned long int)NEURONS; i++) {  
     	   process(kind[i], i, neighbors[i], voltage);
@@ -215,7 +224,13 @@ int main() {
         wm.showmap();        
         
 
+	unsigned long int nueron = ws.process_request();
+	
+	printf("Process %ld\n",nueron);
+
+
 	}
+	
 
 	int msec = diff * 1000 / CLOCKS_PER_SEC;
 	//printf("voltage[0]=%u\n",voltage[0]);
