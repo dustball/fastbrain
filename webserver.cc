@@ -20,7 +20,7 @@ void sigchld_handler(int s) {
 
 class webserver {
 
-    protected:
+  protected:
 
     int sockfd, new_fd;
     struct sockaddr_in their_addr;
@@ -39,7 +39,7 @@ class webserver {
             perror("setsockopt");
             exit(1);
         }
-            my_addr.sin_family = AF_INET;
+        my_addr.sin_family = AF_INET;
         my_addr.sin_port = htons(8082);
         my_addr.sin_addr.s_addr = INADDR_ANY;
         memset(&(my_addr.sin_zero), '\0', 8);
@@ -66,7 +66,7 @@ class webserver {
     int buffer_chunks;
     long filesize;
 
-    public:
+  public:
 
     void start_server() {
         result = NULL;
