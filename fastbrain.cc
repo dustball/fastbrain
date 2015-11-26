@@ -24,8 +24,8 @@
 #define ANT_NEURONS 250000         // 250,000
 #define ANT_CONNECTIONS 80
 
-#define NEURONS 5
-#define CONNECTIONS 2
+#define NEURONS 500
+#define CONNECTIONS 10
 
 std::multimap<unsigned int /* voltage */, unsigned long int /* neuron number */> queue;
 std::set<unsigned long int /* neuron number */> queued;
@@ -37,7 +37,7 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
 
     // printf("Nei Addy = %p\n", &my_neighbors);
 
-    printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
+    //printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
     if (my_neighbors.size()<CONNECTIONS) {
         // static std::random_device rd;
         // static std::mt19937 generator(rd());
@@ -51,19 +51,28 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
     for(std::vector<unsigned int>::iterator it = my_neighbors.begin(); it != my_neighbors.end(); ++it) {
         unsigned long int n = *it;
         unsigned int v = voltage[n];
-        printf("  EQ eV=%imV #%lu\n",-v,n);
-        if (queued.find(n)==queued.end()) {
+        // printf("EQ eV=%imV #%lu\n",-v,n);
+        if (queued.find(n)==queued.end() && queue.find(n)==queue.end()) {
             queue.insert(std::make_pair(v,n));
             queued.insert(n);
         } else {
-            printf("    * Dup\n");
+            // printf("    * Dup\n");
         }
     }
 
-    voltage[neuron] /= 2;
+    voltage[neuron] /= 4;
 
     if (neuron==0) {
         wm.move_fwd();
+    }
+    if (neuron==1) {
+        wm.move_bak();
+    }
+    if (neuron==2) {
+        wm.move_lft();
+    }
+    if (neuron==3) {
+        wm.move_rgt();
     }
 
 }
@@ -71,7 +80,7 @@ void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_ne
 void make_connection(unsigned long int from, std::vector<unsigned int> &my_neighbors, unsigned long int to) {
 
     if (my_neighbors.size()<CONNECTIONS) {
-        printf(" make_connection %lu -> %lu \n",from, to);
+        // printf(" make_connection %lu -> %lu \n",from, to);
         unsigned long int target_neuron = rand() % NEURONS;
         my_neighbors.push_back(to);
     }
@@ -82,12 +91,19 @@ void maybe_fire(unsigned long int neuron, char &kind, std::vector<unsigned int> 
 
     unsigned int *ev = &voltage[neuron];
 
-    printf("Checking Neuron #%lu %c size:%lu eV:%u\n", neuron, kind, my_neighbors.size(), *ev);
+    // printf("Checking Neuron #%lu %c size:%lu eV:%u\n", neuron, kind, my_neighbors.size(), *ev);
 
-    if (*ev>10) {
+    if (*ev>20) {
         fire(neuron, kind, my_neighbors, voltage);
     }
-    *ev += 1;
+    *ev += 2;
+    
+    if (neuron==5) {
+      *ev = (unsigned int) wm.get_distance_above();   
+    }
+    if (neuron==6) {
+      *ev = (unsigned int) wm.get_distance_below();   
+    }
 
     voltage[neuron] = *ev;
 }
@@ -150,12 +166,26 @@ void process(char k, unsigned long int nueron, std::vector<unsigned int> &my_nei
 void init_brain(char kind[], unsigned int voltage[], std::vector<unsigned int> *neighbors) {
     for (unsigned long int i=0; i<NEURONS; i++) {
         voltage[i] = 5;
-        kind[i] = 'C';
+        kind[i] = 'A' + (random() % 3);
 
     }
     // Todo: why doesn't this work
     // neighbors = new std::vector<unsigned int>[NEURONS];
 }
+
+
+void show_neurons(unsigned int voltage[]) {
+    
+    for (unsigned int j=0;j<NEURONS;j+=25) {
+        for (unsigned int i=0;i<25; i++) {
+            printf("%7i ",voltage[j+i]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    
+}
+
 
 int main() {
 
@@ -178,32 +208,30 @@ int main() {
 
     // memcpy(kind,"BFBB\0",5);
 
-
     wm.initmap();
-
     init_brain(kind,voltage,neighbors);
-
 
     // memcpy(kind,"AX",2);
     // kind[1] = 'R';
     // 	voltage[0] = 5;
     // 	voltage[1] = 3;
 
-    
+    clock_t start = clock(), diff;
+    int last = 0;
 
-    for (int ml=0; ml<1000; ml++) {
+    for (int ml=0; ml<100000; ml++) {
 
 //        for (unsigned long int i=0; i<(unsigned long int)NEURONS; i++) {
 //            process(kind[i], i, neighbors[i], voltage);
 //        }
 
-        wm.showmap();
-        
-        unsigned long int nueron = ws.process_request();
+        // printf("\n\nDistance to cheese: %f\n\n",wm.get_distance_to_cheese());
 
-        clock_t start = clock(), diff;
         
-        printf("Process %ld\n",nueron);       
+        unsigned long int nueron = rand() % NEURONS; // ws.process_request();
+
+        
+        // printf("Process %ld\n",nueron);       
         process(kind[nueron], nueron, neighbors[nueron], voltage);
         
         while (!queue.empty()) {
@@ -213,9 +241,9 @@ int main() {
             unsigned int v = it->first;
             unsigned long int n = it->second;
 
-            printf("DQ eV=%imV #%lu ..\n",v, n);
+            // printf("DQ eV=%imV #%lu ..\n",v, n);
 
-            queued.erase(n);
+            // queued.erase(n);
             queue.erase(std::next(it).base());
             process(kind[n], n, neighbors[n], voltage);
 
@@ -224,15 +252,30 @@ int main() {
 
         }
         queue.clear();
+        queued.clear();
 
         int a = rand() % NEURONS;
         int b = rand() % NEURONS;
-        make_connection(a,neighbors[a],b);
-    
+        make_connection(a,neighbors[a],b);    
+
         diff = clock() - start;
         int msec = diff * 1000 / CLOCKS_PER_SEC;
-        printf("\n[%i] Time taken %d seconds %d milliseconds", ml, msec/1000, msec%1000);
-        printf("\nOK\n\n");    
+        if (msec%1000==0 and last!=msec/1000) {
+          printf("\n[%i] Time taken %d seconds %d milliseconds\n\n", ml, msec/1000, msec%1000);
+          last = msec/1000;
+        show_neurons(voltage);
+        wm.showmap();
+          
+        }
+
+        
+        if (wm.won()) {
+            diff = clock() - start;
+            int msec = diff * 1000 / CLOCKS_PER_SEC;
+            printf("\n[%i] Time taken %d seconds %d milliseconds.", ml, msec/1000, msec%1000);
+            printf("\n[%i] Map won.\n",ml);
+            break;
+        }
         
 
     }
