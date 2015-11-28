@@ -60,6 +60,11 @@ class worldmap {
         return;
     }
 
+    void movecheese() {
+        cx = rand() % SIZE;
+        cy = rand() % SIZE;        
+    }
+    
     bool won() {        
         return (cx==plx && cy==ply);
     }
