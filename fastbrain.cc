@@ -35,6 +35,9 @@ class Experiment {
     std::set<unsigned long int /* neuron number */> queued;
     worldmap wm;
     webserver ws;
+    int since, score, last, lastr;
+    bool haswon;
+    clock_t start, diff;
     std::vector<unsigned int> *neighbors;
     
      unsigned int *voltage;
@@ -223,23 +226,27 @@ class Experiment {
     }
     
     
-    void run() {
-    
-        ws.start_server();
+    void setup_experiment() {
+        
+       ws.start_server();
         
         bool haswon = false;
-        int since = 0;
-        int score = 0;
+        since = 0;
+        score = 0;
         
         wm.initmap();
         init_brain();
     
-        clock_t start = clock(), diff;
+        start = clock();
         int last = 0;
         int lastr= 0;
     
-        for (int ml=0; ml<100*1000; ml++) {
-            
+    }
+    
+    void run_cycle(int cycles) {
+    
+        for (int ml=0;ml<cycles;ml++ ) {
+             
             since++;
     
             for (unsigned long int i=5; i<(unsigned long int)9; i++) {
@@ -299,8 +306,8 @@ class Experiment {
                 }
                 
                 if ((kind = (char *) malloc(sizeof(char) * NEURONS)) == NULL) {
-                  printf("unable to allocate kind memory \n");
-                  return;
+                    printf("unable to allocate kind memory \n");
+                    return;
     
                 }          
                 neighbors =   new std::vector<unsigned int>[NEURONS];
@@ -345,16 +352,17 @@ class Experiment {
                 printf("\n[%i,%i] Paused for network\n",ml,since++);
                 nueron =  ws.process_request();
             }
-            
-    
+          
+          
+        
         }
+        
+    }
     
-        printf("\n\n");
-       
-    
+    void clean_up() {
+        
         free(voltage);
-        free(kind);
-    
+        free(kind);    
     
         return;
     }

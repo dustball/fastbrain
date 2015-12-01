@@ -3,6 +3,7 @@
 
 int main() {
     Experiment exp;
-    
-    exp.run();
+   
+    exp.setup_experiment();
+    exp.run_cycle(1000);
 }
