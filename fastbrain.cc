@@ -25,7 +25,7 @@
 #define ANT_CONNECTIONS 80
 
 #define NEURONS 500
-#define CONNECTIONS 10
+#define CONNECTIONS 20
 
 class Experiment {
 
@@ -39,12 +39,9 @@ class Experiment {
     bool haswon;
     clock_t start, diff;
     std::vector<unsigned int> *neighbors;
-    
-     unsigned int *voltage;
-    
-        char *kind;
-    
-    
+    unsigned int *voltage;
+    char *kind;
+        
     
     void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors) {
     
@@ -228,9 +225,9 @@ class Experiment {
     
     void setup_experiment() {
         
-       ws.start_server();
+//       ws.start_server();
         
-        bool haswon = false;
+        haswon = false;
         since = 0;
         score = 0;
         
@@ -238,8 +235,8 @@ class Experiment {
         init_brain();
     
         start = clock();
-        int last = 0;
-        int lastr= 0;
+        last = 0;
+        lastr= 0;
     
     }
     
@@ -291,7 +288,7 @@ class Experiment {
     
             diff = clock() - start;
             int msec = diff * 1000 / CLOCKS_PER_SEC;
-            if (!haswon && ml%1000==0 and lastr!=ml) {
+            if (false && !haswon && ml%1000==0 and lastr!=ml) {
                 printf("\n[%i] Resetting map\n\n", ml);
                 lastr = ml;
                 
@@ -320,10 +317,14 @@ class Experiment {
             diff = clock() - start;
             msec = diff * 1000 / CLOCKS_PER_SEC;
             
-            if (msec%1000==0 and last!=msec/1000) {
+            if (last==0) {
+                last = msec/1000;
+            }
+            
+            if (false && msec%1000==0 and last!=msec/1000) {
                 printf("\n[%i] Time taken %d seconds %d milliseconds\n\n", ml, msec/1000, msec%1000);
                 last = msec/1000;
-                show_neurons();
+                show_neurons(); 
                 wm.showmap();          
             }
     
@@ -344,6 +345,7 @@ class Experiment {
                 wm.movecheese();
                 //wm.showmap();                      
                 haswon=true;
+                return;
             }
             
             if (false && haswon) {
@@ -357,6 +359,15 @@ class Experiment {
         
         }
         
+    }
+    
+    bool won() {        
+        return haswon;
+    }
+    
+    void show_status() {
+        show_neurons();            
+        wm.showmap();        
     }
     
     void clean_up() {

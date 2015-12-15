@@ -65,7 +65,8 @@ class worldmap {
         cy = rand() % SIZE;        
     }
     
-    bool won() {        
+    bool won() {      
+//        printf("PL %f,%f  C %f,%f \n",plx,ply,cx,cy);
         return (cx==plx && cy==ply);
     }
         

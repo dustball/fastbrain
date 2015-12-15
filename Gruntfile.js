@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ['fastbrain.cc','worldmap.cc','webserver.cc','main.cc'],
-            tasks: ['exec:compile']
+            tasks: ['exec:compile'] // 'exec:run'
         }
     });
 
