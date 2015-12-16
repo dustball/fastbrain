@@ -30,23 +30,23 @@ class worldmap {
 //        printf("PLY %f\n",ply);
     }
 
-    double get_distance_to_cheese() {        
-         return sqrt(pow(cx-plx,2)+pow(cy-ply,2));
+    double get_distance_to_cheese() {
+        return sqrt(pow(cx-plx,2)+pow(cy-ply,2));
     }
-    
+
     double get_distance_above() {
-        return fmax((plx-cx),0);        
+        return fmax((plx-cx),0);
     }
     double get_distance_below() {
-        return fmax((cx-plx),0);        
+        return fmax((cx-plx),0);
     }
     double get_distance_left() {
-        return fmax((ply-cy),0);        
+        return fmax((ply-cy),0);
     }
     double get_distance_right() {
-        return fmax((cy-ply),0);        
+        return fmax((cy-ply),0);
     }
-        
+
     void initmap() {
         plx = 20;
         ply = 15;
@@ -62,14 +62,14 @@ class worldmap {
 
     void movecheese() {
         cx = rand() % SIZE;
-        cy = rand() % SIZE;        
+        cy = rand() % SIZE;
     }
-    
-    bool won() {      
+
+    bool won() {
 //        printf("PL %f,%f  C %f,%f \n",plx,ply,cx,cy);
         return (cx==plx && cy==ply);
     }
-        
+
     void showmap() {
 
         printf("plx: %2f ply: %2f\n\n",plx,ply);

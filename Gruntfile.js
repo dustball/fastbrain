@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         exec: {
             compile: {
-            command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -Ofast -lstdc++',
+            command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -Ofast -lstdc++ -std=c++11 ',
             stdout: true,
             stderr: true
             },
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 stderr: true
             },
             debug: {
-                command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -g -O0 -lstdc++',
+                command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -g -O0 -lstdc++ -std=c++11 ',
                 stdout: true,
                 stderr: true
             },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 stderr: true
             },
             lldb: {
-                command: 'lldb fastbrain.debug',
+                command: 'lldb fastbrain',
                 stdout: true,
                 stderr: true,
                 stdin: true
