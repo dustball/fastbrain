@@ -28,8 +28,8 @@ using namespace std;
 #define ANT_NEURONS 250000         // 250,000
 #define ANT_CONNECTIONS 80
 
-#define NEURONS 500
-#define CONNECTIONS 20
+#define NEURONS 50
+#define CONNECTIONS 10
 
 class Experiment {
 
@@ -39,7 +39,7 @@ class Experiment {
     std::set<unsigned long int /* neuron number */> queued;
     worldmap wm;
     webserver ws;
-    int since, score, last, lastr;
+    int last, lastr;
     bool haswon;
     clock_t start, diff;
     std::vector<unsigned int> *neighbors;
@@ -232,8 +232,6 @@ class Experiment {
 
 //       ws.start_server();
         haswon = false;
-        since = 0;
-        score = 0;
 
         wm.initmap();
         init_brain();
@@ -253,7 +251,7 @@ class Experiment {
     void reset_board() {
 
         wm.initmap();
-        wm.movecheese();
+        // wm.movecheese();
 
         haswon = false;
 
@@ -267,7 +265,6 @@ class Experiment {
 
         for (int ml=0; ml<cycles; ml++ ) {
 
-            since++;
 
             for (unsigned long int i=5; i<(unsigned long int)9; i++) {
                 //process(kind[i], i, neighbors[i], voltage);
@@ -278,6 +275,7 @@ class Experiment {
             // printf("\n\nDistance to cheese: %f\n\n",wm.get_distance_to_cheese());
 
             unsigned long int nueron = rand() % NEURONS; // ws.process_request();
+            // rand() or ml
 
 
             // printf("Process %ld\n",nueron);
@@ -311,31 +309,32 @@ class Experiment {
 
             diff = clock() - start;
             int msec = diff * 1000 / CLOCKS_PER_SEC;
-            if (false && !haswon && ml%1000==0 and lastr!=ml) {
-                printf("\n[%i] Resetting map\n\n", ml);
-                lastr = ml;
 
-                // Wheeeee!!!!
-
-                free(voltage);
-                free(kind);
-
-                if ((voltage = (unsigned int *) malloc(sizeof(unsigned int) * NEURONS)) == NULL) {
-                    printf("unable to allocate voltage memory \n");
-                    return;
-                }
-
-                if ((kind = (char *) malloc(sizeof(char) * NEURONS)) == NULL) {
-                    printf("unable to allocate kind memory \n");
-                    return;
-
-                }
-                neighbors =   new std::vector<unsigned int>[NEURONS];
-                wm.initmap();
-                init_brain();
-                queue.clear();
-                queued.clear();
-            }
+//            if (false && !haswon && ml%1000==0 and lastr!=ml) {
+//                printf("\n[%i] Resetting map\n\n", ml);
+//                lastr = ml;
+//
+//                // Wheeeee!!!!
+//
+//                free(voltage);
+//                free(kind);
+//
+//                if ((voltage = (unsigned int *) malloc(sizeof(unsigned int) * NEURONS)) == NULL) {
+//                    printf("unable to allocate voltage memory \n");
+//                    return;
+//                }
+//
+//                if ((kind = (char *) malloc(sizeof(char) * NEURONS)) == NULL) {
+//                    printf("unable to allocate kind memory \n");
+//                    return;
+//
+//                }
+//                neighbors =   new std::vector<unsigned int>[NEURONS];
+//                wm.initmap();
+//                init_brain();
+//                queue.clear();
+//                queued.clear();
+//            }
 
             diff = clock() - start;
             msec = diff * 1000 / CLOCKS_PER_SEC;
@@ -356,14 +355,7 @@ class Experiment {
                 diff = clock() - start;
                 int msec = diff * 1000 / CLOCKS_PER_SEC;
                 // printf("\n[%i] Time taken %d seconds %d milliseconds.", ml, msec/1000, msec%1000);
-                score++;
-                printf("\n[%i] Map won in %i ticks (%i).\n",ml,since,score);
-                show_neurons();
-                since = 0;
-                if (score>20) {
-                    printf("20 points in %i ticks: %i\n",ml,ml/20);
-                    return;
-                }
+                printf("   Map won in %i ticks.\n",ml);
 //                wm.initmap();
 //                wm.movecheese();
                 //wm.showmap();
@@ -374,7 +366,7 @@ class Experiment {
             if (false && haswon) {
                 show_neurons();
                 wm.showmap();
-                printf("\n[%i,%i] Paused for network\n",ml,since++);
+                printf("\n[%i] Paused for network\n",ml);
                 nueron =  ws.process_request();
             }
 
@@ -401,6 +393,13 @@ class Experiment {
         return;
     }
 
+    float get_score() {
+        return (wm.get_greatest_distance_possible()-wm.get_distance_to_cheese())/wm.get_greatest_distance_possible()*100;
+    }
+
+    void randomize_locations() {
+        wm.randomize_locations();
+    }
 
     //    std::multimap<unsigned int /* voltage */, unsigned long int /* neuron number */> queue;
     //    std::set<unsigned long int /* neuron number */> queued;
@@ -414,6 +413,30 @@ class Experiment {
     //    char *kind;
     //    bool learning;
     //
+
+    // overload == operator
+    Experiment& operator=(const Experiment& src) {
+        init_brain();
+        for (int i=0; i<NEURONS; i++) {
+            voltage[i] = src.voltage[i];
+            kind[i] = src.kind[i];
+            for(std::vector<unsigned int>::iterator it = src.neighbors[i].begin(); it != src.neighbors[i].end(); ++it) {
+                unsigned long int n = *it;
+                neighbors[i].push_back(n);
+            }
+
+        }
+        return *this;
+    }
+
+    // copy constructor
+    Experiment(const Experiment& src) {
+        *this = src;
+    }
+
+    Experiment() {
+    }
+
 
     // Load
     friend std::istream& operator>>(std::istream& is, Experiment& e) {
@@ -432,7 +455,7 @@ class Experiment {
             is >> label >> e.voltage[i];
             if (strcmp(label,"Voltage")!=0) return is;
 
-            printf("Neuron #%i %c %ieV\n",n, e.kind[i], e.voltage[i]);
+//            printf("Neuron #%i %c %ieV\n",n, e.kind[i], e.voltage[i]);
 
             do {
                 unsigned int target;
@@ -443,10 +466,10 @@ class Experiment {
                 if (strcmp(label,"Connection")!=0) return is;
                 is >> target;
                 e.neighbors[i].push_back(target);
-                cout << " Connection -> " << target << "\n";
+//                cout << " Connection -> " << target << "\n";
             } while (strcmp(label,"Connection")==0);
 
-            cout << "\n";
+//            cout << "\n";
 
         }
 
@@ -473,6 +496,21 @@ class Experiment {
         return os;
     }
 
+    void mutate(int deltas) {
+        for (int i=0; i<deltas; i++) {
+            unsigned long int neuron = rand() % NEURONS;
+            std::vector<unsigned int> *my_neighbors = &neighbors[neuron];
+            cout << "SizeI: " << my_neighbors->size() << "\n";
+            if (my_neighbors->size()>=CONNECTIONS) {
+                my_neighbors->erase(my_neighbors->begin() + rand() % CONNECTIONS);
+            } else {
+                my_neighbors->push_back(rand() % NEURONS);
+            }
+            cout << "SizeO: " << my_neighbors->size() << "\n";
+
+        }
+
+    }
 
 };
 

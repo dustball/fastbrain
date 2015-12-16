@@ -34,6 +34,10 @@ class worldmap {
         return sqrt(pow(cx-plx,2)+pow(cy-ply,2));
     }
 
+    double get_greatest_distance_possible() {
+        return sqrt(pow(SIZE,2)+pow(SIZE,2));
+    }
+
     double get_distance_above() {
         return fmax((plx-cx),0);
     }
@@ -58,6 +62,16 @@ class worldmap {
             }
         }
         return;
+    }
+
+    void randomize_locations() {
+        const int edge_border = 2;
+        do {
+            plx = edge_border + rand() % (SIZE-edge_border*2);
+            ply = edge_border + rand() % (SIZE-edge_border*2);
+            cx = edge_border + rand() % (SIZE-edge_border*2);
+            cy = edge_border + rand() % (SIZE-edge_border*2);
+        } while (get_distance_to_cheese()<5);
     }
 
     void movecheese() {

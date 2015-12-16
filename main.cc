@@ -2,66 +2,93 @@
 #include "fastbrain.cc"
 #include <iostream>
 #include <fstream>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
 int main() {
+
     Experiment exp;
+    int version = 1;
+    char filename[50];
 
-
+    // Step 1. Find a neural network that finds the cheese at least once
 
     exp.set_learning_mode(true);
 
-    // Step 1: Find a neural network that finds the cheese at least once
-
-    for (int i=0; i<50; i++) {
+    for (int i=0; i<200; i++) {
         exp.setup_experiment();
-        exp.run_cycle(1000);
+        exp.run_cycle(200);
+
+        double score = exp.get_score();
         if (exp.won()) {
-            cout << i << " won!\n\n";
+            cout << i << " won! Score: " << score << "\n";
             break;
         } else {
-            cout << i << " lost.\n";
+            cout << i << " lost. Score: " << score << "\n";
         }
     }
 
-    // exp.save_brain("won.brain");
+    cout << "\n";
 
-    ofstream ofs("won.brain");
-
+    // Step 1a. Save the winning brain to disk
+    sprintf(filename,"mouse.brain.v%i",version);
+    ofstream ofs(filename);
     ofs << exp;
     ofs.close();
 
+    // Step 2. Test the brain over-and-over and score it, mutate it, repeat
 
+    double best_score_yet = 0.0;
 
-    Experiment copy;
+    do {
 
-    ifstream ifs("won.brain");
+        double score_total = 0.0;
+        const int tests = 200;
 
-    // read the object back in
-    ifs >> copy;
-    ifs.close();
+        Experiment derivative = exp;
+        derivative.mutate(4);
+        // std::this_thread::sleep_for (std::chrono::seconds(2));
 
-    ofstream ofs2("copy.brain");
+        for (int i=0; i<tests; i++) {
 
-    ofs2 << copy;
-    ofs2.close();
+            Experiment copy = derivative;
 
-    return 1;
+            copy.setup_experiment();
+            copy.set_learning_mode(false);
+            copy.reset_board();
+            copy.randomize_locations();
+            copy.run_cycle(100);
 
-    exp.set_learning_mode(false);
+            double score = copy.get_score();
+            score_total += score;
 
-    // Step 2: Test the network 100 times and score it
+            if (copy.won()) {
+                cout << i << " won! Score: " << score << "\n";
+            } else {
+                cout << i << " lost. Score: " << score << "\n";
+                // copy.show_status();
+            }
 
-    for (int i=0; i<100; i++) {
-        exp.reset_board();
-        exp.run_cycle(1000);
-        if (exp.won()) {
-            cout << i << " won!\n";
-        } else {
-            cout << i << " lost.\n";
         }
-    }
+
+        cout << "Average Score: " << (score_total/tests) << "\n";
+        cout << "Best Score: " << (best_score_yet) << "\n\n";
+
+        if (score_total/tests>best_score_yet) {
+            best_score_yet = score_total/tests;
+            version++;
+            cout << "\n\nSaving New Version " << version << "\n\n";
+            sprintf(filename,"mouse.brain.v%i",version);
+            ofstream ofs2(filename);
+            ofs2 << derivative;
+            ofs2.close();
+            exp = derivative;
+            std::this_thread::sleep_for (std::chrono::seconds(1));
+        }
+
+    } while (1);
 
 
 }
