@@ -57,8 +57,8 @@ class worldmap {
         cx = 2;
         cy = 27;
         for (int x=0; x<SIZE; x++) {
-            for (int y=0; y<SIZE; y++) {                
-                if (x==plx && y==ply) 
+            for (int y=0; y<SIZE; y++) {
+                if (x==plx && y==ply)
                     field[x][y]= 'M';
                 else
                     field[x][y]= ' ';

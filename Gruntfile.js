@@ -33,15 +33,22 @@ module.exports = function(grunt) {
                 stderr: true,
                 stdin: true
             },
+            graphvis: {
+                command: 'dot -Tpng brain.gv > brain.png',
+                stdout: true,
+                stderr: true,
+                stdin: true
+            },
         },
         watch: {
             files: ['fastbrain.cc','worldmap.cc','webserver.cc','main.cc'],
             tasks: ['exec:compile','exec:kill'] // 'exec:run'
         }
     });
-
+        
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
+    grunt.registerTask('gb',['exec:graphvis']);
     grunt.registerTask('debug',['exec:debug']);
     grunt.registerTask('indent',['exec:indent']);
     grunt.registerTask('loop',['exec:run','loop']);

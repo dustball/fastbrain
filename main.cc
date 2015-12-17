@@ -5,7 +5,6 @@
 #include <iomanip>
 
 #include "fastbrain.cc"
-#include "almostequals.cc"
 
 using namespace std;
 
@@ -15,14 +14,14 @@ int main() {
     char filename[50];
 
     Experiment control_mouse1, control_mouse2;
-    
+
     control_mouse1.setup_experiment();
     control_mouse2.setup_experiment();
-    
+
 //
 //    for (int i=0; i<200; i++) {
 //        control_mouse1.setup_experiment();
-//        
+//
 //        ifstream ifs("deform.brain");
 //        ifs >> control_mouse1;
 //        ifs.close();
@@ -74,44 +73,44 @@ int main() {
         control_mouse1.set_debug(false);
         control_mouse1.run_cycle(cycles);
         double cm1_score = control_mouse1.get_score();
-        double moves = control_mouse1.get_moves();       
+        double moves = control_mouse1.get_moves();
 
         control_mouse2.reset_board();
         control_mouse2.randomize_locations();
-        control_mouse2.set_learning_mode(false);        
+        control_mouse2.set_learning_mode(false);
         control_mouse2.run_cycle(cycles);
         double cm2_score = control_mouse2.get_score();
 
-        expiremantal_mouse1.reset_board(); 
-        expiremantal_mouse1.randomize_locations();        
+        expiremantal_mouse1.reset_board();
+        expiremantal_mouse1.randomize_locations();
         expiremantal_mouse1.set_learning_mode(false && test_iterations==1);
         expiremantal_mouse1.run_cycle(cycles);
         double em1_score = expiremantal_mouse1.get_score();
-        double em1_moves = expiremantal_mouse1.get_moves();       
-    
+        double em1_moves = expiremantal_mouse1.get_moves();
+
         expiremantal_mouse2.reset_board();
         expiremantal_mouse2.randomize_locations();
         expiremantal_mouse2.set_learning_mode(false && test_iterations==1);
         expiremantal_mouse2.run_cycle(cycles);
         double em2_score = expiremantal_mouse2.get_score();
-        double em2_moves = expiremantal_mouse2.get_moves();       
+        double em2_moves = expiremantal_mouse2.get_moves();
 
         cm1_score_total += cm1_score;
         cm2_score_total += cm2_score;
         em1_score_total += em1_score;
         em2_score_total += em2_score;
-        
+
 //cout << "EM2 Score: "<< em2_score << " " << em2_score_total << endl;
-        
+
         double cm1_average = cm1_score_total / test_iterations;
         double cm2_average = cm2_score_total / test_iterations;
         double em1_average = em1_score_total / test_iterations;
         double em2_average = em2_score_total / test_iterations;
 
         if (true || test_iterations % 100==20) {
-            
+
             // cout << "I: " << test_iterations << " ";
-            
+
             cout << "Won: " << std::fixed << setprecision(1) << setw(5) << (cm2_average+cm1_average)/2 << "% ";
             cout << "m=" << std::fixed << std::setfill('0') << setprecision(0) << setw(3) << moves << " ";
             cout << "m1=" << std::fixed << setprecision(0) << setw(3) << em1_moves << " ";
@@ -126,69 +125,72 @@ int main() {
             cout << "\n";
         }
 
-        const FloatingPoint<double> lhs(cm1_average), rhs(cm2_average);
-
         if (test_iterations >= 20  && (cm1_average+cm2_average)/2>99.9) {
-                version++;
-                cout << endl;
-                cout << "  Game over.  Mouse is awesome." << endl;
-                cout << "  Saving New Version " << version << "\n";
-                sprintf(filename,"mouse.brain.v%i",version);
-                ofstream ofs(filename);
-                ofs << control_mouse1;
-                ofs.close();     
-                exit(1);       
-        }
-               
-        if (test_iterations >= 20  && abs(cm2_average-cm1_average)<1) {
-                // pick a winner
-                cout << endl;
-                
-                if (em1_average>em2_average && em1_average>max(cm1_average,cm2_average)+1) {
-                        cout << "Winner: Experimental Mouse #1\n";
-                        cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << em1_average << "%\n";
-                        cout << "  Δ=+" << std::fixed << setprecision(5) << setw(7) << em1_average-max(cm2_average,cm1_average) << "\n";
-                        expiremantal_mouse2 = expiremantal_mouse1;
-                        control_mouse1 = expiremantal_mouse1;
-                        control_mouse2 = expiremantal_mouse1;
-                } else if (em2_average>em1_average && em2_average>max(cm1_average,cm2_average)+1) {
-                        cout << "Winner: Experimental Mouse #2\n";
-                        cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << em2_average << "%\n";
-                        cout << "  Δ=+" << std::fixed << setprecision(5) << setw(7) << em2_average-max(cm2_average,cm1_average) << "\n";
-                        expiremantal_mouse1 = expiremantal_mouse2;
-                        control_mouse1 = expiremantal_mouse2;
-                        control_mouse2 = expiremantal_mouse2;
-                } else {
-                        cout << "Winner: Control Group\n";
-                        cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << ((cm2_average+cm1_average)/2) << "%\n";
-                        control_mouse2 = control_mouse1;
-                        expiremantal_mouse1 = control_mouse1;
-                        expiremantal_mouse2 = control_mouse1;
-                        
-                }                
-                
-                version++;
-                cout << "  Saving New Version " << version << "\n";
-                sprintf(filename,"mouse.brain.v%i",version);
-                ofstream ofs(filename);
-                ofs << control_mouse1;
-                ofs.close();
-                                    
-                int mutate = (int) 100- ((cm2_average+cm1_average)/2);
-                cout << "  Mutate: " << mutate << endl << endl;
+            version++;
+            cout << endl;
+            cout << "  Experiment complete.  Mouse has found the cheese ";
+            cout << std::fixed << setprecision(1) << (cm2_average+cm1_average)/2 << "% of the time." << endl;
+            cout << "  Saving New Version " << version << "\n";
+            sprintf(filename,"mouse.brain.v%i",version);
+            ofstream ofs(filename);
+            ofs << control_mouse1;
+            ofs.close();
 
-                expiremantal_mouse1.mutate(mutate);    
-                expiremantal_mouse2.mutate(mutate);
-                
-                cm1_score_total = 0.0, cm2_score_total = 0.0, em1_score_total = 0.0, em2_score_total = 0.0;
-                test_iterations = 0;
-                
-                
+            sprintf(filename,"mouse.brain.v%i.gv",version);
+            control_mouse1.graphviz(filename);
+
+            exit(1);
+        }
+
+        if (test_iterations >= 20  && abs(cm2_average-cm1_average)<1) {
+            // pick a winner
+            cout << endl;
+
+            if (em1_average>em2_average && em1_average>max(cm1_average,cm2_average)+1) {
+                cout << "Winner: Experimental Mouse #1\n";
+                cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << em1_average << "%\n";
+                cout << "  Δ=+" << std::fixed << setprecision(5) << setw(7) << em1_average-max(cm2_average,cm1_average) << "\n";
+                expiremantal_mouse2 = expiremantal_mouse1;
+                control_mouse1 = expiremantal_mouse1;
+                control_mouse2 = expiremantal_mouse1;
+            } else if (em2_average>em1_average && em2_average>max(cm1_average,cm2_average)+1) {
+                cout << "Winner: Experimental Mouse #2\n";
+                cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << em2_average << "%\n";
+                cout << "  Δ=+" << std::fixed << setprecision(5) << setw(7) << em2_average-max(cm2_average,cm1_average) << "\n";
+                expiremantal_mouse1 = expiremantal_mouse2;
+                control_mouse1 = expiremantal_mouse2;
+                control_mouse2 = expiremantal_mouse2;
+            } else {
+                cout << "Winner: Control Group\n";
+                cout << "  Score: " << std::fixed << setprecision(1) << setw(4) << ((cm2_average+cm1_average)/2) << "%\n";
+                control_mouse2 = control_mouse1;
+                expiremantal_mouse1 = control_mouse1;
+                expiremantal_mouse2 = control_mouse1;
+
+            }
+
+            version++;
+            cout << "  Saving New Version " << version << "\n";
+            sprintf(filename,"mouse.brain.v%i",version);
+            ofstream ofs(filename);
+            ofs << control_mouse1;
+            ofs.close();
+
+            int mutate = (int) 100- ((cm2_average+cm1_average)/2);
+            cout << "  Mutate: " << mutate << endl << endl;
+
+            expiremantal_mouse1.mutate(mutate);
+            expiremantal_mouse2.mutate(mutate);
+
+            cm1_score_total = 0.0, cm2_score_total = 0.0, em1_score_total = 0.0, em2_score_total = 0.0;
+            test_iterations = 0;
+
+
 //                this_thread::sleep_for (chrono::seconds(1));
         }
-        
-        
-        
+
+
+
     } while (1);
 
 //

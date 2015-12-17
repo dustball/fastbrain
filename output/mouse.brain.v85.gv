@@ -1,0 +1,47 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="15,15"
+	node [shape = doublecircle]; 0 1 2 3 
+	node [shape = diamond]; 5 6 7 8 
+	0 [label="0\nMove\nForward",fillcolor="#ffe1a0",style="filled"];
+	1 [label="1\nMove\nBack",fillcolor="#ffe1a0",style="filled"];
+	2 [label="2\nMove\nLeft",fillcolor="#ffe1a0",style="filled"];
+	3 [label="3\nMove\nRight",fillcolor="#ffe1a0",style="filled"];
+	5 [label="5\nFront\nCheese\nDetector",fillcolor="#d6f1ff",style="filled"];
+	6 [label="6\nRear\nCheese\nDetector",fillcolor="#d6f1ff",style="filled"];
+	7 [label="7\nLeft\nCheese\nDetector",fillcolor="#d6f1ff",style="filled"];
+	8 [label="8\nRight\nCheese\nDetector",fillcolor="#d6f1ff",style="filled"];
+	0 -> 11 [ ];
+	3 -> 17 [ ];
+	4 -> 3 [ ];
+	5 -> 17 [ ];
+	5 -> 0 [ ];
+	6 -> 20 [ ];
+	6 -> 14 [ ];
+	7 -> 2 [ ];
+	7 -> 1 [ ];
+	8 -> 3 [ ];
+	8 -> 3 [ ];
+	9 -> 0 [ ];
+	9 -> 8 [ ];
+	10 -> 17 [ ];
+	10 -> 8 [ ];
+	12 -> 18 [ ];
+	13 -> 11 [ ];
+	14 -> 8 [ ];
+	14 -> 16 [ ];
+	16 -> 1 [ ];
+	16 -> 11 [ ];
+	17 -> 3 [ ];
+	18 -> 15 [ ];
+	18 -> 16 [ ];
+	19 -> 17 [ ];
+	19 -> 3 [ ];
+	20 -> 19 [ ];
+	21 -> 16 [ ];
+	21 -> 8 [ ];
+	22 -> 2 [ ];
+	23 -> 4 [ ];
+	23 -> 21 [ ];
+	24 -> 5 [ ];
+}

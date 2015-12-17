@@ -13,7 +13,7 @@
 #include <map>
 #include <iostream>
 #include <fstream>
-#include <algorithm> 
+#include <algorithm>
 #include "worldmap.cc"
 #include "webserver.cc"
 
@@ -56,7 +56,7 @@ class Experiment {
         // printf("Nei Addy = %p\n", &my_neighbors);
 
 //        printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
-        if (learning) {        
+        if (learning) {
             if (my_neighbors.size()<CONNECTIONS) {
                 // static std::random_device rd;
                 // static std::mt19937 generator(rd());
@@ -69,7 +69,7 @@ class Experiment {
 //                printf(" Unconnecting neuron %lu -> .. \n",neuron);
                 my_neighbors.erase(my_neighbors.begin() + rand() % CONNECTIONS);
             }
-            
+
         }
 
         for(std::vector<unsigned int>::iterator it = my_neighbors.begin(); it != my_neighbors.end(); ++it) {
@@ -138,7 +138,7 @@ class Experiment {
         }
 
         if (neuron<5 || neuron>8) {
-            *ev += 2;   // BK +=2 
+            *ev += 2;   // BK +=2
         }
 
 
@@ -187,12 +187,12 @@ class Experiment {
         // printf("voltage[%i]=%u\n",nueron,voltage[nueron]);
 
         switch (k) {
-            case 'A':
-                voltage[nueron] = v_double(voltage[nueron]);
-                break;
-            case 'B':
-                voltage[nueron] = v_add(voltage[nueron],3);
-                break;
+        case 'A':
+            voltage[nueron] = v_double(voltage[nueron]);
+            break;
+        case 'B':
+            voltage[nueron] = v_add(voltage[nueron],3);
+            break;
         }
 
         maybe_fire(nueron, k, my_neighbors);
@@ -425,10 +425,10 @@ class Experiment {
 //        cout << "II: " <<initial_distance << endl;
 //        return max(initial_distance-wm.get_distance_to_cheese(),0.0) / initial_distance * 100;
         float score = (initial_distance-wm.get_distance_to_cheese()) / initial_distance * 100;
-        
+
         return std::max(score,-10.0f);
     }
-    
+
     void randomize_locations() {
         wm.randomize_locations();
         initial_distance = wm.get_distance_to_cheese();
@@ -548,6 +548,45 @@ class Experiment {
 
         }
 
+    }
+
+
+    //    digraph finite_state_machine {
+    //    	rankdir=LR;
+    //    	size="15,15"
+    //    	node [shape = doublecircle]; 0 1 2 3
+    //    	node [shape = diamond]; 5 6 7 8
+    //    	node [shape = circle];
+    //    	1 -> 2 [ ];
+    //    	2 -> 3 [ ];
+    //    	3 -> 1 [ ];
+    //    }
+
+
+    void graphviz(char *filename) {
+        ofstream gv;
+        gv.open (filename);
+        gv << "digraph finite_state_machine {" << endl;
+        gv << "\t" << "rankdir=LR;" << endl;
+        gv << "\t" << "size=\"15,15\"" << endl;
+        gv << "\t" << "node [shape = doublecircle]; 0 1 2 3 " << endl;
+        gv << "\t" << "node [shape = diamond]; 5 6 7 8 " << endl;
+        gv << "\t" << "0 [label=\"0\\nMove\\nForward\",fillcolor=\"#ffe1a0\",style=\"filled\"];" << endl;
+        gv << "\t" << "1 [label=\"1\\nMove\\nBack\",fillcolor=\"#ffe1a0\",style=\"filled\"];" << endl;
+        gv << "\t" << "2 [label=\"2\\nMove\\nLeft\",fillcolor=\"#ffe1a0\",style=\"filled\"];" << endl;
+        gv << "\t" << "3 [label=\"3\\nMove\\nRight\",fillcolor=\"#ffe1a0\",style=\"filled\"];" << endl;
+        gv << "\t" << "5 [label=\"5\\nFront\\nCheese\\nDetector\",fillcolor=\"#d6f1ff\",style=\"filled\"];" << endl;
+        gv << "\t" << "6 [label=\"6\\nRear\\nCheese\\nDetector\",fillcolor=\"#d6f1ff\",style=\"filled\"];" << endl;
+        gv << "\t" << "7 [label=\"7\\nLeft\\nCheese\\nDetector\",fillcolor=\"#d6f1ff\",style=\"filled\"];" << endl;
+        gv << "\t" << "8 [label=\"8\\nRight\\nCheese\\nDetector\",fillcolor=\"#d6f1ff\",style=\"filled\"];" << endl;
+        for (int i=0; i<NEURONS; i++) {
+            for(std::vector<unsigned int>::iterator it = neighbors[i].begin(); it != neighbors[i].end(); ++it) {
+                unsigned long int n = *it;
+                gv << "\t" << i << " -> " << n << " [ ];" << endl;
+            }
+        }
+        gv << "}" << endl;
+        gv.close();
     }
 
 };

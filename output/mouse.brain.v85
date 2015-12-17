@@ -1,0 +1,158 @@
+Neuron 0
+Kind B
+Voltage 8
+Connection 11
+EndNeuron
+
+Neuron 1
+Kind B
+Voltage 12
+EndNeuron
+
+Neuron 2
+Kind A
+Voltage 10
+EndNeuron
+
+Neuron 3
+Kind B
+Voltage 12
+Connection 17
+EndNeuron
+
+Neuron 4
+Kind C
+Voltage 17
+Connection 3
+EndNeuron
+
+Neuron 5
+Kind B
+Voltage 5
+Connection 17
+Connection 0
+EndNeuron
+
+Neuron 6
+Kind B
+Voltage 8
+Connection 20
+Connection 14
+EndNeuron
+
+Neuron 7
+Kind A
+Voltage 10
+Connection 2
+Connection 1
+EndNeuron
+
+Neuron 8
+Kind A
+Voltage 5
+Connection 3
+Connection 3
+EndNeuron
+
+Neuron 9
+Kind B
+Voltage 17
+Connection 0
+Connection 8
+EndNeuron
+
+Neuron 10
+Kind C
+Voltage 19
+Connection 17
+Connection 8
+EndNeuron
+
+Neuron 11
+Kind B
+Voltage 12
+EndNeuron
+
+Neuron 12
+Kind C
+Voltage 7
+Connection 18
+EndNeuron
+
+Neuron 13
+Kind B
+Voltage 22
+Connection 11
+EndNeuron
+
+Neuron 14
+Kind C
+Voltage 19
+Connection 8
+Connection 16
+EndNeuron
+
+Neuron 15
+Kind B
+Voltage 17
+EndNeuron
+
+Neuron 16
+Kind A
+Voltage 18
+Connection 1
+Connection 11
+EndNeuron
+
+Neuron 17
+Kind A
+Voltage 10
+Connection 3
+EndNeuron
+
+Neuron 18
+Kind B
+Voltage 22
+Connection 15
+Connection 16
+EndNeuron
+
+Neuron 19
+Kind B
+Voltage 17
+Connection 17
+Connection 3
+EndNeuron
+
+Neuron 20
+Kind C
+Voltage 7
+Connection 19
+EndNeuron
+
+Neuron 21
+Kind C
+Voltage 7
+Connection 16
+Connection 8
+EndNeuron
+
+Neuron 22
+Kind A
+Voltage 7
+Connection 2
+EndNeuron
+
+Neuron 23
+Kind A
+Voltage 22
+Connection 4
+Connection 21
+EndNeuron
+
+Neuron 24
+Kind C
+Voltage 15
+Connection 5
+EndNeuron
+
