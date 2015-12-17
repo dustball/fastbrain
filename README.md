@@ -3,6 +3,9 @@
 
 A performance optimized neural network written in C++.
 
+## Mouse Experiment
+
+* An empty/blank neural network of an arbitrary size is created - anywhere from 25 nodes to 25 million nodes (or more, really)* There are four OUTPUT neurons that are hardwired to neuron number 0, 1, 2, and 3; for moving forward, back, left and right respectively.  This would be equivalent to an SNS neuron in an animal.  Whenever one of these neurons fires, it causes the mouse to move.* There are four INPUT neurons that are hardwired to simple "cheese sensors".  Neuron numbers 5, 6, 7 and 8 will fire more or less often depending on how strong the cheese smell is towards its front, back, left or right.* None of the neurons are connected at start* If a human being were to intervene, the most obvious solution is to hardwire neuron number 5 to neuron number 0, neuron 6 to neuron 0, and so forth.  The goal of this experiment is to naturally develop connections that will get the mouse to the cheese without God (that's us) stepping in and wiring things properly.* The program will create a control group consisting of two mice, and an experimental group of two additional mice  * fastbrain will create a random mutation in each of the experimental mice.  The control mice are untouched.  * Next the program will run the mice through thousands of mazes.  At first, nothing will happen.  The motor neurons have nothing connected to them.  Each iteration of experimental mutation adds neural connections that will improve or worsen the success rate.    * Many attempts will be wrong.  A pathway might get connected from the “cheese is forward” neuron to the “move backward” neuron.  Imagine a mouse that wants to eat cheese but is wired to run away from it.  The experiment logic will test the neural network and compare it to the control (“best neural network so far” in reality).   * The program runs each of the four mice through mazes over and over until enough data is gathered that the two control mice have 1% or less maze success rate  * fastbrain determines a winner: control, em1 (experimental mouse #1) or em2, and resets the experiment so that all four mice, control and experiment, are now based on this new generation.  * The program continues to build a neuron network until the mouse finds the cheese 100% of the time.* The program saves the neural network to a file after every iteration for inspection* The program generates a Graphiviz image once the experiment concludes and the neural network is complete. See below.
 
 # Requirements
 
@@ -17,6 +20,18 @@ CC flags optimized for cclang (Mac OSX).
 # Sample Output
 
 ```
+Key:
+
+Won: Current maze success rate (average of two control mice).
+m, m1, m2: How many mouse moves the control, experimental mouse 1 & 2 made in the last maze.
+Δ: The difference between the two control mice (will run until <1%)
+CM1: Control Mouse 1 - Average maze success rate & last score. 
+CM2: Control Mouse 2
+EM1: Experimental Mouse 1
+EM2: Experimental Mouse 2
+1Δ: The improvement (or worsening) of experimental mouse 1 vs. control average
+2Δ: The improvement (or worsening) of experimental mouse 2 vs. control average
+
 Won:  37.9% m=073 m1=023 m2=046 Δ= 1.38093 CM1:  38.5516  43.5% CM2:  37.1707  58.1% EM1:  59.7924 100.0% EM2:  22.3320 -10.0% 1Δ=21.93125 2Δ=-15.52917 
 Won:  38.3% m=177 m1=077 m2=015 Δ= 3.50227 CM1:  36.5243  -6.0% CM2:  40.0266 100.0% EM1:  58.9623  41.5% EM2:  20.9014  -9.1% 1Δ=20.68684 2Δ=-17.37404 
 Won:  38.7% m=102 m1=054 m2=064 Δ= 7.15505 CM1:  35.1594   5.1% CM2:  42.3145  92.6% EM1:  56.2676  -3.0% EM2:  20.3289   7.7% 1Δ=17.53065 2Δ=-18.40803 
@@ -70,6 +85,12 @@ Won: 100.0% m=082 m1=101 m2=063 Δ= 0.00000 CM1: 100.0000 100.0% CM2: 100.0000 1
   Experiment complete.  Mouse has found the cheese 100.0% of the time.
   Saving New Version 85  
 ````  
+
+# Graphviz Output
+
+The program will automatically generate Graphviz visualizations for the neural network.
+
+## Simple 25 Neuron Network, 4 input neurons, 4 output neurons
 
 ![Mouse Brain v85](output/brain.png?raw=true "Mouse Brain v85")
 
