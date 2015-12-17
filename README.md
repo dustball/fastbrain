@@ -71,5 +71,5 @@ Won: 100.0% m=082 m1=101 m2=063 Δ= 0.00000 CM1: 100.0000 100.0% CM2: 100.0000 1
   Saving New Version 85  
 ````  
 
-![Mouse Brain v85](blob/master/output/brain.png?raw=true "Mouse Brain v85")
+![Mouse Brain v85](output/brain.png?raw=true "Mouse Brain v85")
 
