@@ -1,3 +1,6 @@
 fastbrain
 node_modules
 fastbrain.debug*
+*.orig
+mouse.brain*
+fastbrain.dSYM

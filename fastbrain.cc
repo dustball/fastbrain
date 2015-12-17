@@ -13,6 +13,7 @@
 #include <map>
 #include <iostream>
 #include <fstream>
+#include <algorithm> 
 #include "worldmap.cc"
 #include "webserver.cc"
 
@@ -28,8 +29,8 @@ using namespace std;
 #define ANT_NEURONS 250000         // 250,000
 #define ANT_CONNECTIONS 80
 
-#define NEURONS 50
-#define CONNECTIONS 10
+#define NEURONS 25
+#define CONNECTIONS 5
 
 class Experiment {
 
@@ -46,21 +47,29 @@ class Experiment {
     unsigned int *voltage;
     char *kind;
     bool learning;
-
+    int moves;
+    double initial_distance;
+    bool debug;
 
     void fire(unsigned long int neuron, char &kind, std::vector<unsigned int> &my_neighbors) {
 
         // printf("Nei Addy = %p\n", &my_neighbors);
 
-        //printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
-        if (learning && my_neighbors.size()<CONNECTIONS) {
-            // static std::random_device rd;
-            // static std::mt19937 generator(rd());
-            // static std::uniform_int_distribution<unsigned long int> distribution(0, NEURONS);
-            // unsigned long int target_neuron = distribution(generator);
-            // printf(" Connecting neuron %i -> %i \n",neuron, target_neuron);
-            unsigned long int target_neuron = rand() % NEURONS;
-            my_neighbors.push_back(target_neuron);
+//        printf("  Firing Neuron #%lu %c size:%lu\n", neuron, kind, my_neighbors.size());
+        if (learning) {        
+            if (my_neighbors.size()<CONNECTIONS) {
+                // static std::random_device rd;
+                // static std::mt19937 generator(rd());
+                // static std::uniform_int_distribution<unsigned long int> distribution(0, NEURONS);
+                // unsigned long int target_neuron = distribution(generator);
+                unsigned long int target_neuron = rand() % NEURONS;
+//                printf(" Connecting neuron %lu -> %lu \n",neuron, target_neuron);
+                my_neighbors.push_back(target_neuron);
+            } else {
+//                printf(" Unconnecting neuron %lu -> .. \n",neuron);
+                my_neighbors.erase(my_neighbors.begin() + rand() % CONNECTIONS);
+            }
+            
         }
 
         for(std::vector<unsigned int>::iterator it = my_neighbors.begin(); it != my_neighbors.end(); ++it) {
@@ -75,8 +84,11 @@ class Experiment {
             }
         }
 
-        voltage[neuron] = 1;
+        voltage[neuron] /= 4;  // BK /= 4
 
+        if (neuron<4) {
+            moves++;
+        }
         if (neuron==0) {
             wm.move_fwd();
         }
@@ -125,8 +137,8 @@ class Experiment {
             fire(neuron, kind, my_neighbors);
         }
 
-        if (neuron>10) {
-            *ev += 1;
+        if (neuron<5 || neuron>8) {
+            *ev += 2;   // BK +=2 
         }
 
 
@@ -175,12 +187,12 @@ class Experiment {
         // printf("voltage[%i]=%u\n",nueron,voltage[nueron]);
 
         switch (k) {
-        case 'A':
-            voltage[nueron] = v_double(voltage[nueron]);
-            break;
-        case 'B':
-            voltage[nueron] = v_add(voltage[nueron],3);
-            break;
+            case 'A':
+                voltage[nueron] = v_double(voltage[nueron]);
+                break;
+            case 'B':
+                voltage[nueron] = v_add(voltage[nueron],3);
+                break;
         }
 
         maybe_fire(nueron, k, my_neighbors);
@@ -202,7 +214,7 @@ class Experiment {
 
 
         for (unsigned long int i=0; i<NEURONS; i++) {
-            voltage[i] = 1;
+            voltage[i] = 1; //BK 5
             kind[i] = 'A' + (random() % 3);
 
         }
@@ -230,7 +242,7 @@ class Experiment {
 
     void setup_experiment() {
 
-//       ws.start_server();
+        // ws.start_server();
         haswon = false;
 
         wm.initmap();
@@ -239,13 +251,25 @@ class Experiment {
         start = clock();
         last = 0;
         lastr= 0;
+        moves = 0;
+        initial_distance = wm.get_distance_to_cheese();
 
+        learning = false;
+        debug = false;
+
+    }
+
+    void set_debug(bool in) {
+        debug = in;
     }
 
     void set_learning_mode(bool mode) {
         learning = mode;
     }
 
+    int get_moves() {
+        return moves;
+    }
 
 
     void reset_board() {
@@ -258,6 +282,7 @@ class Experiment {
         start = clock();
         last = 0;
         lastr= 0;
+        moves = 0;
 
     }
 
@@ -274,7 +299,7 @@ class Experiment {
 
             // printf("\n\nDistance to cheese: %f\n\n",wm.get_distance_to_cheese());
 
-            unsigned long int nueron = rand() % NEURONS; // ws.process_request();
+            unsigned long int nueron = (rand() % (NEURONS-4))+4; // ws.process_request();
             // rand() or ml
 
 
@@ -343,11 +368,10 @@ class Experiment {
                 last = msec/1000;
             }
 
-            if (false && msec%1000==0 and last!=msec/1000) {
+            if (debug || (false && msec%1000==0 && last!=msec/1000)) {
                 printf("\n[%i] Time taken %d seconds %d milliseconds\n\n", ml, msec/1000, msec%1000);
                 last = msec/1000;
-                show_neurons();
-                wm.showmap();
+                show_status();
             }
 
 
@@ -355,7 +379,7 @@ class Experiment {
                 diff = clock() - start;
                 int msec = diff * 1000 / CLOCKS_PER_SEC;
                 // printf("\n[%i] Time taken %d seconds %d milliseconds.", ml, msec/1000, msec%1000);
-                printf("   Map won in %i ticks.\n",ml);
+//                printf("   Map won in %i ticks.\n",ml);
 //                wm.initmap();
 //                wm.movecheese();
                 //wm.showmap();
@@ -383,6 +407,10 @@ class Experiment {
     void show_status() {
         show_neurons();
         wm.showmap();
+        cout << "Init : " << initial_distance << endl;
+        cout << "Dist : " << wm.get_distance_to_cheese() << endl;
+        cout << "Score: " << get_score() << endl;
+        cout << "Moves: " << moves << endl;
     }
 
     void clean_up() {
@@ -394,11 +422,16 @@ class Experiment {
     }
 
     float get_score() {
-        return (wm.get_greatest_distance_possible()-wm.get_distance_to_cheese())/wm.get_greatest_distance_possible()*100;
+//        cout << "II: " <<initial_distance << endl;
+//        return max(initial_distance-wm.get_distance_to_cheese(),0.0) / initial_distance * 100;
+        float score = (initial_distance-wm.get_distance_to_cheese()) / initial_distance * 100;
+        
+        return std::max(score,-10.0f);
     }
-
+    
     void randomize_locations() {
         wm.randomize_locations();
+        initial_distance = wm.get_distance_to_cheese();
     }
 
     //    std::multimap<unsigned int /* voltage */, unsigned long int /* neuron number */> queue;
@@ -426,6 +459,8 @@ class Experiment {
             }
 
         }
+        learning = false;
+        debug = false;
         return *this;
     }
 
@@ -435,6 +470,8 @@ class Experiment {
     }
 
     Experiment() {
+        learning = false;
+        debug = false;
     }
 
 
@@ -500,13 +537,14 @@ class Experiment {
         for (int i=0; i<deltas; i++) {
             unsigned long int neuron = rand() % NEURONS;
             std::vector<unsigned int> *my_neighbors = &neighbors[neuron];
-            cout << "SizeI: " << my_neighbors->size() << "\n";
-            if (my_neighbors->size()>=CONNECTIONS) {
-                my_neighbors->erase(my_neighbors->begin() + rand() % CONNECTIONS);
+            if (my_neighbors->size()>=CONNECTIONS/2) {
+//                cout << "Removing connection from neuron " << neuron << "\n";
+                my_neighbors->erase(my_neighbors->begin() + rand() % my_neighbors->size());
+                my_neighbors->erase(my_neighbors->begin() + rand() % my_neighbors->size());
             } else {
+//                cout << "Adding connection to neuron " << neuron << "\n";
                 my_neighbors->push_back(rand() % NEURONS);
             }
-            cout << "SizeO: " << my_neighbors->size() << "\n";
 
         }
 

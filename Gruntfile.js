@@ -3,12 +3,17 @@ module.exports = function(grunt) {
     grunt.initConfig({
         exec: {
             compile: {
-            command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -Ofast -lstdc++ -std=c++11 ',
-            stdout: true,
-            stderr: true
+                command: 'gcc -Wfatal-errors -Werror main.cc -o fastbrain -Ofast -lstdc++ -std=c++11 ',
+                stdout: true,
+                stderr: true
             },
             run: {
                 command: './fastbrain',
+                stdout: true,
+                stderr: true
+            },
+            kill: {
+                command: 'killall -9 fastbrain',
                 stdout: true,
                 stderr: true
             },
@@ -31,7 +36,7 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ['fastbrain.cc','worldmap.cc','webserver.cc','main.cc'],
-            tasks: ['exec:compile'] // 'exec:run'
+            tasks: ['exec:compile','exec:kill'] // 'exec:run'
         }
     });
 
@@ -39,6 +44,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.registerTask('debug',['exec:debug']);
     grunt.registerTask('indent',['exec:indent']);
+    grunt.registerTask('loop',['exec:run','loop']);
 
     grunt.registerTask('default', ['exec:compile','watch']);
 

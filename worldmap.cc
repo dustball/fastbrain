@@ -57,21 +57,26 @@ class worldmap {
         cx = 2;
         cy = 27;
         for (int x=0; x<SIZE; x++) {
-            for (int y=0; y<SIZE; y++) {
-                field[x][y]= ' ';
+            for (int y=0; y<SIZE; y++) {                
+                if (x==plx && y==ply) 
+                    field[x][y]= 'M';
+                else
+                    field[x][y]= ' ';
             }
         }
         return;
     }
 
     void randomize_locations() {
+        field[(int)plx][(int)ply]= ' ';
         const int edge_border = 2;
         do {
             plx = edge_border + rand() % (SIZE-edge_border*2);
             ply = edge_border + rand() % (SIZE-edge_border*2);
             cx = edge_border + rand() % (SIZE-edge_border*2);
             cy = edge_border + rand() % (SIZE-edge_border*2);
-        } while (get_distance_to_cheese()<5);
+        } while (get_distance_to_cheese()<5 || std::abs(plx-cx)<4 || std::abs(ply-cy)<4);
+        field[(int)plx][(int)ply]= 'M';
     }
 
     void movecheese() {
@@ -97,7 +102,7 @@ class worldmap {
             printf("|");
             for (int y=0; y<SIZE; y++) {
                 if (x==plx && y==ply) {
-                    printf("M");
+                    printf("m");
                 } else if (x==cx && y==cy) {
                     printf("C");
                 } else {
