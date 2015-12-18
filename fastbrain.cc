@@ -29,8 +29,8 @@ using namespace std;
 #define ANT_NEURONS 250000         // 250,000
 #define ANT_CONNECTIONS 80
 
-#define NEURONS 25
-#define CONNECTIONS 5
+#define NEURONS 500
+#define CONNECTIONS 10
 
 class Experiment {
 

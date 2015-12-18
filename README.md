@@ -1,6 +1,5 @@
 # fastbrain
 
-
 A performance optimized neural network written in C++.
 
 ## Mouse Experiment
@@ -12,10 +11,9 @@ A performance optimized neural network written in C++.
 * C++ 11
 * Grunt - https://www.npmjs.com/package/grunt
 
-Run "grunt" from the command line to build.
+Run `grunt` from the command line to build.  The default target will watch the C++ files and automatically recompile the executable as you edit the code.  This is intended to make development easier and more fun.  In a seperate terminal window, run `./loop.bash` to repeatedly run the executable over and over.  If the code compiles successfully, grunt will `kill -9` the process.  
 
 CC flags optimized for cclang (Mac OSX).
-
 
 # Sample Output
 
@@ -92,5 +90,11 @@ The program will automatically generate Graphviz visualizations for the neural n
 
 ## Simple 25 Neuron Network, 4 input neurons, 4 output neurons
 
-![Mouse Brain v85](output/brain.png?raw=true "Mouse Brain v85")
+![25neuron.v85](output/mouse.brain.25neuron.v85.png?raw=true "25neuron.v85")
+
+## 500 Neuron Network, same 4 input/output neurons
+
+This is a real, working neural network.  The mouse will find the cheese 100% of the time.  This network was built by 4,174 generations of mice.  
+
+![500neuron.v4174](output/mouse.brain.500neuron.v4174.png?raw=true "500neuron.v4174")
 

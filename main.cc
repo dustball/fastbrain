@@ -142,7 +142,7 @@ int main() {
             exit(1);
         }
 
-        if (test_iterations >= 20  && abs(cm2_average-cm1_average)<1) {
+        if (test_iterations >= 50  && abs(cm2_average-cm1_average)<2) {
             // pick a winner
             cout << endl;
 

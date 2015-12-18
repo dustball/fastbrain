@@ -1,0 +1,4467 @@
+Neuron 0
+Kind B
+Voltage 7
+Connection 290
+Connection 206
+Connection 306
+Connection 222
+EndNeuron
+
+Neuron 1
+Kind B
+Voltage 13
+Connection 115
+Connection 230
+Connection 384
+Connection 468
+Connection 492
+EndNeuron
+
+Neuron 2
+Kind A
+Voltage 8
+Connection 377
+Connection 187
+Connection 3
+Connection 284
+EndNeuron
+
+Neuron 3
+Kind B
+Voltage 8
+Connection 367
+Connection 171
+Connection 484
+EndNeuron
+
+Neuron 4
+Kind C
+Voltage 17
+Connection 447
+Connection 408
+Connection 101
+Connection 103
+Connection 424
+EndNeuron
+
+Neuron 5
+Kind B
+Voltage 5
+Connection 365
+Connection 152
+Connection 108
+Connection 499
+EndNeuron
+
+Neuron 6
+Kind B
+Voltage 14
+Connection 488
+Connection 37
+Connection 222
+Connection 107
+Connection 179
+EndNeuron
+
+Neuron 7
+Kind A
+Voltage 6
+Connection 36
+Connection 418
+Connection 185
+Connection 485
+EndNeuron
+
+Neuron 8
+Kind A
+Voltage 14
+Connection 247
+Connection 222
+Connection 466
+Connection 314
+EndNeuron
+
+Neuron 9
+Kind B
+Voltage 17
+Connection 287
+Connection 408
+Connection 426
+Connection 276
+EndNeuron
+
+Neuron 10
+Kind C
+Voltage 11
+Connection 36
+Connection 210
+Connection 167
+EndNeuron
+
+Neuron 11
+Kind B
+Voltage 17
+Connection 6
+Connection 6
+Connection 379
+Connection 74
+EndNeuron
+
+Neuron 12
+Kind C
+Voltage 13
+Connection 223
+Connection 47
+Connection 208
+Connection 288
+EndNeuron
+
+Neuron 13
+Kind B
+Voltage 22
+Connection 295
+Connection 90
+Connection 281
+EndNeuron
+
+Neuron 14
+Kind C
+Voltage 9
+Connection 195
+Connection 236
+Connection 314
+Connection 334
+Connection 162
+EndNeuron
+
+Neuron 15
+Kind B
+Voltage 17
+Connection 426
+Connection 196
+Connection 28
+EndNeuron
+
+Neuron 16
+Kind A
+Voltage 18
+Connection 206
+Connection 470
+Connection 158
+Connection 349
+Connection 192
+EndNeuron
+
+Neuron 17
+Kind A
+Voltage 7
+Connection 319
+Connection 277
+Connection 376
+Connection 413
+Connection 224
+EndNeuron
+
+Neuron 18
+Kind B
+Voltage 8
+Connection 347
+Connection 402
+Connection 447
+Connection 440
+EndNeuron
+
+Neuron 19
+Kind B
+Voltage 12
+Connection 194
+Connection 79
+Connection 254
+Connection 371
+EndNeuron
+
+Neuron 20
+Kind C
+Voltage 17
+Connection 254
+Connection 450
+Connection 289
+EndNeuron
+
+Neuron 21
+Kind C
+Voltage 9
+Connection 430
+Connection 260
+Connection 188
+Connection 337
+Connection 118
+EndNeuron
+
+Neuron 22
+Kind A
+Voltage 18
+Connection 325
+Connection 24
+Connection 280
+Connection 42
+Connection 330
+EndNeuron
+
+Neuron 23
+Kind A
+Voltage 22
+Connection 188
+Connection 120
+Connection 268
+Connection 312
+Connection 195
+EndNeuron
+
+Neuron 24
+Kind C
+Voltage 11
+Connection 369
+Connection 5
+Connection 299
+Connection 57
+EndNeuron
+
+Neuron 25
+Kind C
+Voltage 15
+Connection 301
+Connection 240
+Connection 175
+EndNeuron
+
+Neuron 26
+Kind C
+Voltage 7
+Connection 229
+Connection 109
+Connection 20
+Connection 64
+EndNeuron
+
+Neuron 27
+Kind B
+Voltage 12
+Connection 182
+Connection 398
+Connection 43
+EndNeuron
+
+Neuron 28
+Kind B
+Voltage 13
+Connection 145
+Connection 411
+Connection 367
+Connection 456
+Connection 38
+EndNeuron
+
+Neuron 29
+Kind B
+Voltage 22
+Connection 241
+Connection 477
+Connection 120
+EndNeuron
+
+Neuron 30
+Kind C
+Voltage 9
+Connection 247
+Connection 61
+Connection 475
+EndNeuron
+
+Neuron 31
+Kind A
+Voltage 11
+Connection 341
+Connection 392
+Connection 376
+Connection 452
+EndNeuron
+
+Neuron 32
+Kind A
+Voltage 11
+Connection 66
+Connection 437
+Connection 193
+EndNeuron
+
+Neuron 33
+Kind A
+Voltage 10
+Connection 62
+Connection 34
+Connection 228
+EndNeuron
+
+Neuron 34
+Kind C
+Voltage 11
+Connection 260
+Connection 153
+Connection 67
+EndNeuron
+
+Neuron 35
+Kind A
+Voltage 7
+Connection 165
+Connection 164
+Connection 21
+Connection 342
+EndNeuron
+
+Neuron 36
+Kind B
+Voltage 17
+Connection 2
+Connection 150
+Connection 370
+EndNeuron
+
+Neuron 37
+Kind B
+Voltage 12
+Connection 116
+Connection 142
+Connection 422
+EndNeuron
+
+Neuron 38
+Kind B
+Voltage 7
+Connection 483
+Connection 146
+Connection 292
+Connection 24
+EndNeuron
+
+Neuron 39
+Kind B
+Voltage 18
+Connection 330
+Connection 191
+Connection 151
+Connection 71
+Connection 105
+EndNeuron
+
+Neuron 40
+Kind A
+Voltage 7
+Connection 34
+Connection 468
+Connection 21
+EndNeuron
+
+Neuron 41
+Kind A
+Voltage 7
+Connection 58
+Connection 134
+Connection 123
+Connection 247
+EndNeuron
+
+Neuron 42
+Kind A
+Voltage 16
+Connection 400
+Connection 92
+Connection 438
+Connection 233
+EndNeuron
+
+Neuron 43
+Kind C
+Voltage 9
+Connection 48
+Connection 112
+Connection 49
+EndNeuron
+
+Neuron 44
+Kind C
+Voltage 21
+Connection 112
+Connection 406
+Connection 72
+EndNeuron
+
+Neuron 45
+Kind B
+Voltage 18
+Connection 26
+Connection 74
+Connection 252
+Connection 375
+EndNeuron
+
+Neuron 46
+Kind C
+Voltage 21
+Connection 478
+Connection 490
+Connection 38
+EndNeuron
+
+Neuron 47
+Kind C
+Voltage 9
+Connection 326
+Connection 451
+Connection 52
+Connection 279
+Connection 277
+EndNeuron
+
+Neuron 48
+Kind C
+Voltage 15
+Connection 15
+Connection 120
+Connection 204
+Connection 18
+EndNeuron
+
+Neuron 49
+Kind A
+Voltage 10
+Connection 471
+Connection 372
+Connection 392
+Connection 403
+EndNeuron
+
+Neuron 50
+Kind C
+Voltage 19
+Connection 94
+Connection 128
+Connection 262
+EndNeuron
+
+Neuron 51
+Kind B
+Voltage 7
+Connection 30
+Connection 61
+Connection 65
+EndNeuron
+
+Neuron 52
+Kind B
+Voltage 18
+Connection 455
+Connection 261
+Connection 381
+Connection 189
+EndNeuron
+
+Neuron 53
+Kind C
+Voltage 19
+Connection 158
+Connection 204
+Connection 477
+EndNeuron
+
+Neuron 54
+Kind C
+Voltage 7
+Connection 212
+Connection 248
+Connection 255
+Connection 22
+EndNeuron
+
+Neuron 55
+Kind A
+Voltage 13
+Connection 215
+Connection 368
+Connection 373
+Connection 23
+Connection 105
+EndNeuron
+
+Neuron 56
+Kind C
+Voltage 21
+Connection 363
+Connection 343
+Connection 417
+EndNeuron
+
+Neuron 57
+Kind C
+Voltage 21
+Connection 319
+Connection 76
+Connection 397
+Connection 402
+Connection 28
+EndNeuron
+
+Neuron 58
+Kind B
+Voltage 7
+Connection 429
+Connection 477
+Connection 230
+Connection 276
+Connection 177
+EndNeuron
+
+Neuron 59
+Kind B
+Voltage 13
+Connection 432
+Connection 246
+Connection 422
+Connection 107
+Connection 470
+EndNeuron
+
+Neuron 60
+Kind A
+Voltage 11
+Connection 491
+Connection 231
+Connection 211
+Connection 412
+Connection 373
+EndNeuron
+
+Neuron 61
+Kind A
+Voltage 11
+Connection 490
+Connection 474
+Connection 401
+EndNeuron
+
+Neuron 62
+Kind C
+Voltage 17
+Connection 416
+Connection 73
+Connection 472
+EndNeuron
+
+Neuron 63
+Kind A
+Voltage 7
+Connection 36
+Connection 199
+Connection 235
+EndNeuron
+
+Neuron 64
+Kind C
+Voltage 9
+Connection 427
+Connection 301
+Connection 95
+Connection 52
+Connection 479
+EndNeuron
+
+Neuron 65
+Kind C
+Voltage 11
+Connection 418
+Connection 297
+Connection 261
+EndNeuron
+
+Neuron 66
+Kind B
+Voltage 18
+Connection 70
+Connection 493
+Connection 149
+Connection 254
+EndNeuron
+
+Neuron 67
+Kind A
+Voltage 16
+Connection 497
+Connection 474
+Connection 258
+Connection 348
+EndNeuron
+
+Neuron 68
+Kind B
+Voltage 18
+Connection 115
+Connection 16
+Connection 335
+EndNeuron
+
+Neuron 69
+Kind C
+Voltage 21
+Connection 85
+Connection 61
+Connection 384
+Connection 268
+EndNeuron
+
+Neuron 70
+Kind A
+Voltage 22
+Connection 310
+Connection 366
+Connection 82
+Connection 154
+EndNeuron
+
+Neuron 71
+Kind A
+Voltage 10
+Connection 225
+Connection 333
+Connection 338
+Connection 463
+Connection 401
+EndNeuron
+
+Neuron 72
+Kind A
+Voltage 16
+Connection 359
+Connection 187
+Connection 162
+Connection 368
+EndNeuron
+
+Neuron 73
+Kind A
+Voltage 16
+Connection 127
+Connection 173
+Connection 94
+Connection 9
+EndNeuron
+
+Neuron 74
+Kind C
+Voltage 13
+Connection 424
+Connection 88
+Connection 362
+EndNeuron
+
+Neuron 75
+Kind A
+Voltage 18
+Connection 464
+Connection 428
+Connection 256
+Connection 325
+EndNeuron
+
+Neuron 76
+Kind C
+Voltage 19
+Connection 182
+Connection 125
+Connection 42
+Connection 468
+Connection 218
+EndNeuron
+
+Neuron 77
+Kind C
+Voltage 19
+Connection 193
+Connection 288
+Connection 107
+EndNeuron
+
+Neuron 78
+Kind A
+Voltage 11
+Connection 70
+Connection 446
+Connection 419
+Connection 433
+EndNeuron
+
+Neuron 79
+Kind C
+Voltage 19
+Connection 197
+Connection 286
+Connection 214
+Connection 392
+EndNeuron
+
+Neuron 80
+Kind B
+Voltage 22
+Connection 257
+Connection 129
+Connection 93
+EndNeuron
+
+Neuron 81
+Kind A
+Voltage 16
+Connection 346
+Connection 284
+Connection 120
+Connection 495
+Connection 151
+EndNeuron
+
+Neuron 82
+Kind A
+Voltage 18
+Connection 290
+Connection 295
+Connection 92
+EndNeuron
+
+Neuron 83
+Kind C
+Voltage 19
+Connection 217
+Connection 196
+Connection 289
+Connection 319
+Connection 163
+EndNeuron
+
+Neuron 84
+Kind C
+Voltage 19
+Connection 45
+Connection 290
+Connection 489
+Connection 133
+Connection 38
+EndNeuron
+
+Neuron 85
+Kind A
+Voltage 11
+Connection 317
+Connection 441
+Connection 30
+Connection 349
+EndNeuron
+
+Neuron 86
+Kind A
+Voltage 11
+Connection 222
+Connection 480
+Connection 474
+EndNeuron
+
+Neuron 87
+Kind C
+Voltage 21
+Connection 252
+Connection 268
+Connection 369
+Connection 493
+EndNeuron
+
+Neuron 88
+Kind C
+Voltage 21
+Connection 78
+Connection 44
+Connection 35
+EndNeuron
+
+Neuron 89
+Kind B
+Voltage 7
+Connection 76
+Connection 435
+Connection 495
+Connection 356
+Connection 153
+EndNeuron
+
+Neuron 90
+Kind A
+Voltage 16
+Connection 151
+Connection 2
+Connection 9
+Connection 376
+Connection 68
+EndNeuron
+
+Neuron 91
+Kind A
+Voltage 7
+Connection 19
+Connection 254
+Connection 358
+Connection 38
+EndNeuron
+
+Neuron 92
+Kind C
+Voltage 21
+Connection 296
+Connection 57
+Connection 239
+EndNeuron
+
+Neuron 93
+Kind A
+Voltage 22
+Connection 95
+Connection 344
+Connection 67
+Connection 333
+Connection 437
+EndNeuron
+
+Neuron 94
+Kind B
+Voltage 7
+Connection 4
+Connection 427
+Connection 127
+Connection 304
+Connection 164
+EndNeuron
+
+Neuron 95
+Kind B
+Voltage 12
+Connection 441
+Connection 113
+Connection 261
+EndNeuron
+
+Neuron 96
+Kind B
+Voltage 12
+Connection 162
+Connection 6
+Connection 58
+Connection 62
+Connection 384
+EndNeuron
+
+Neuron 97
+Kind A
+Voltage 7
+Connection 306
+Connection 101
+Connection 53
+Connection 29
+EndNeuron
+
+Neuron 98
+Kind A
+Voltage 11
+Connection 182
+Connection 32
+Connection 184
+Connection 181
+Connection 126
+EndNeuron
+
+Neuron 99
+Kind C
+Voltage 7
+Connection 215
+Connection 462
+Connection 112
+EndNeuron
+
+Neuron 100
+Kind A
+Voltage 8
+Connection 246
+Connection 310
+Connection 241
+Connection 180
+EndNeuron
+
+Neuron 101
+Kind B
+Voltage 12
+Connection 97
+Connection 93
+Connection 191
+Connection 289
+EndNeuron
+
+Neuron 102
+Kind C
+Voltage 15
+Connection 445
+Connection 196
+Connection 346
+Connection 115
+Connection 463
+EndNeuron
+
+Neuron 103
+Kind B
+Voltage 8
+Connection 67
+Connection 15
+Connection 94
+Connection 386
+Connection 276
+EndNeuron
+
+Neuron 104
+Kind C
+Voltage 15
+Connection 297
+Connection 119
+Connection 486
+EndNeuron
+
+Neuron 105
+Kind A
+Voltage 13
+Connection 377
+Connection 345
+Connection 62
+Connection 453
+EndNeuron
+
+Neuron 106
+Kind C
+Voltage 17
+Connection 184
+Connection 160
+Connection 345
+Connection 185
+EndNeuron
+
+Neuron 107
+Kind C
+Voltage 17
+Connection 219
+Connection 274
+Connection 87
+EndNeuron
+
+Neuron 108
+Kind A
+Voltage 22
+Connection 213
+Connection 233
+Connection 498
+EndNeuron
+
+Neuron 109
+Kind A
+Voltage 11
+Connection 210
+Connection 498
+Connection 380
+Connection 165
+Connection 380
+EndNeuron
+
+Neuron 110
+Kind B
+Voltage 8
+Connection 8
+Connection 349
+Connection 182
+Connection 347
+EndNeuron
+
+Neuron 111
+Kind C
+Voltage 11
+Connection 434
+Connection 100
+Connection 255
+Connection 89
+EndNeuron
+
+Neuron 112
+Kind B
+Voltage 13
+Connection 302
+Connection 143
+Connection 461
+EndNeuron
+
+Neuron 113
+Kind C
+Voltage 13
+Connection 354
+Connection 58
+Connection 221
+Connection 260
+EndNeuron
+
+Neuron 114
+Kind C
+Voltage 17
+Connection 282
+Connection 60
+Connection 69
+EndNeuron
+
+Neuron 115
+Kind B
+Voltage 8
+Connection 270
+Connection 44
+Connection 320
+Connection 145
+EndNeuron
+
+Neuron 116
+Kind A
+Voltage 8
+Connection 19
+Connection 289
+Connection 36
+Connection 177
+EndNeuron
+
+Neuron 117
+Kind C
+Voltage 9
+Connection 428
+Connection 95
+Connection 293
+Connection 374
+EndNeuron
+
+Neuron 118
+Kind B
+Voltage 8
+Connection 378
+Connection 343
+Connection 142
+Connection 297
+Connection 45
+EndNeuron
+
+Neuron 119
+Kind C
+Voltage 9
+Connection 426
+Connection 352
+Connection 470
+Connection 336
+EndNeuron
+
+Neuron 120
+Kind B
+Voltage 17
+Connection 496
+Connection 324
+Connection 53
+Connection 139
+Connection 400
+EndNeuron
+
+Neuron 121
+Kind A
+Voltage 10
+Connection 117
+Connection 281
+Connection 415
+EndNeuron
+
+Neuron 122
+Kind A
+Voltage 10
+Connection 424
+Connection 305
+Connection 58
+Connection 13
+EndNeuron
+
+Neuron 123
+Kind B
+Voltage 17
+Connection 330
+Connection 126
+Connection 481
+EndNeuron
+
+Neuron 124
+Kind A
+Voltage 7
+Connection 164
+Connection 137
+Connection 375
+Connection 238
+EndNeuron
+
+Neuron 125
+Kind C
+Voltage 7
+Connection 282
+Connection 321
+Connection 440
+Connection 442
+Connection 47
+EndNeuron
+
+Neuron 126
+Kind A
+Voltage 7
+Connection 455
+Connection 317
+Connection 213
+EndNeuron
+
+Neuron 127
+Kind C
+Voltage 19
+Connection 391
+Connection 499
+Connection 286
+Connection 370
+EndNeuron
+
+Neuron 128
+Kind A
+Voltage 22
+Connection 76
+Connection 487
+Connection 120
+Connection 252
+EndNeuron
+
+Neuron 129
+Kind B
+Voltage 22
+Connection 45
+Connection 117
+Connection 108
+Connection 277
+EndNeuron
+
+Neuron 130
+Kind A
+Voltage 22
+Connection 346
+Connection 476
+Connection 186
+Connection 157
+EndNeuron
+
+Neuron 131
+Kind B
+Voltage 7
+Connection 9
+Connection 101
+Connection 402
+EndNeuron
+
+Neuron 132
+Kind C
+Voltage 7
+Connection 149
+Connection 250
+Connection 217
+Connection 307
+EndNeuron
+
+Neuron 133
+Kind A
+Voltage 22
+Connection 124
+Connection 84
+Connection 1
+Connection 415
+Connection 426
+EndNeuron
+
+Neuron 134
+Kind A
+Voltage 16
+Connection 249
+Connection 370
+Connection 288
+EndNeuron
+
+Neuron 135
+Kind C
+Voltage 17
+Connection 57
+Connection 389
+Connection 217
+Connection 3
+EndNeuron
+
+Neuron 136
+Kind B
+Voltage 13
+Connection 366
+Connection 495
+Connection 473
+Connection 203
+EndNeuron
+
+Neuron 137
+Kind C
+Voltage 17
+Connection 352
+Connection 98
+Connection 53
+Connection 90
+EndNeuron
+
+Neuron 138
+Kind C
+Voltage 21
+Connection 318
+Connection 364
+Connection 211
+Connection 490
+Connection 64
+EndNeuron
+
+Neuron 139
+Kind C
+Voltage 13
+Connection 411
+Connection 170
+Connection 368
+EndNeuron
+
+Neuron 140
+Kind B
+Voltage 18
+Connection 34
+Connection 245
+Connection 60
+Connection 214
+Connection 192
+EndNeuron
+
+Neuron 141
+Kind A
+Voltage 13
+Connection 0
+Connection 475
+Connection 303
+Connection 14
+Connection 441
+EndNeuron
+
+Neuron 142
+Kind C
+Voltage 15
+Connection 16
+Connection 187
+Connection 272
+Connection 57
+Connection 174
+EndNeuron
+
+Neuron 143
+Kind C
+Voltage 9
+Connection 304
+Connection 457
+Connection 393
+Connection 107
+Connection 12
+EndNeuron
+
+Neuron 144
+Kind A
+Voltage 11
+Connection 101
+Connection 429
+Connection 12
+EndNeuron
+
+Neuron 145
+Kind C
+Voltage 15
+Connection 463
+Connection 375
+Connection 150
+Connection 350
+EndNeuron
+
+Neuron 146
+Kind A
+Voltage 10
+Connection 78
+Connection 44
+Connection 200
+Connection 403
+EndNeuron
+
+Neuron 147
+Kind A
+Voltage 22
+Connection 66
+Connection 252
+Connection 219
+Connection 187
+EndNeuron
+
+Neuron 148
+Kind B
+Voltage 7
+Connection 447
+Connection 131
+Connection 467
+EndNeuron
+
+Neuron 149
+Kind C
+Voltage 7
+Connection 186
+Connection 336
+Connection 159
+Connection 150
+EndNeuron
+
+Neuron 150
+Kind B
+Voltage 18
+Connection 127
+Connection 473
+Connection 129
+Connection 69
+EndNeuron
+
+Neuron 151
+Kind A
+Voltage 11
+Connection 114
+Connection 169
+Connection 137
+Connection 175
+EndNeuron
+
+Neuron 152
+Kind A
+Voltage 7
+Connection 438
+Connection 123
+Connection 280
+EndNeuron
+
+Neuron 153
+Kind C
+Voltage 15
+Connection 194
+Connection 276
+Connection 368
+EndNeuron
+
+Neuron 154
+Kind C
+Voltage 15
+Connection 116
+Connection 491
+Connection 411
+EndNeuron
+
+Neuron 155
+Kind B
+Voltage 8
+Connection 405
+Connection 448
+Connection 264
+Connection 45
+Connection 250
+EndNeuron
+
+Neuron 156
+Kind C
+Voltage 11
+Connection 425
+Connection 361
+Connection 474
+EndNeuron
+
+Neuron 157
+Kind A
+Voltage 13
+Connection 164
+Connection 354
+Connection 489
+Connection 376
+EndNeuron
+
+Neuron 158
+Kind B
+Voltage 8
+Connection 467
+Connection 382
+Connection 431
+Connection 53
+Connection 119
+EndNeuron
+
+Neuron 159
+Kind C
+Voltage 15
+Connection 408
+Connection 354
+Connection 252
+Connection 86
+Connection 135
+EndNeuron
+
+Neuron 160
+Kind C
+Voltage 15
+Connection 375
+Connection 143
+Connection 75
+Connection 355
+Connection 454
+EndNeuron
+
+Neuron 161
+Kind B
+Voltage 7
+Connection 241
+Connection 152
+Connection 88
+Connection 148
+EndNeuron
+
+Neuron 162
+Kind C
+Voltage 7
+Connection 385
+Connection 289
+Connection 109
+Connection 240
+Connection 345
+EndNeuron
+
+Neuron 163
+Kind C
+Voltage 7
+Connection 204
+Connection 184
+Connection 15
+Connection 100
+Connection 76
+EndNeuron
+
+Neuron 164
+Kind B
+Voltage 17
+Connection 178
+Connection 475
+Connection 175
+Connection 204
+Connection 186
+EndNeuron
+
+Neuron 165
+Kind C
+Voltage 11
+Connection 395
+Connection 165
+Connection 124
+EndNeuron
+
+Neuron 166
+Kind B
+Voltage 22
+Connection 34
+Connection 326
+Connection 86
+EndNeuron
+
+Neuron 167
+Kind B
+Voltage 17
+Connection 141
+Connection 432
+Connection 447
+Connection 453
+EndNeuron
+
+Neuron 168
+Kind C
+Voltage 11
+Connection 266
+Connection 45
+Connection 401
+Connection 71
+EndNeuron
+
+Neuron 169
+Kind B
+Voltage 12
+Connection 485
+Connection 146
+Connection 285
+Connection 427
+EndNeuron
+
+Neuron 170
+Kind A
+Voltage 16
+Connection 234
+Connection 129
+Connection 162
+EndNeuron
+
+Neuron 171
+Kind B
+Voltage 12
+Connection 79
+Connection 211
+Connection 100
+EndNeuron
+
+Neuron 172
+Kind C
+Voltage 19
+Connection 250
+Connection 158
+Connection 388
+Connection 326
+Connection 29
+EndNeuron
+
+Neuron 173
+Kind C
+Voltage 17
+Connection 126
+Connection 118
+Connection 116
+Connection 229
+EndNeuron
+
+Neuron 174
+Kind A
+Voltage 22
+Connection 3
+Connection 91
+Connection 183
+Connection 170
+Connection 191
+EndNeuron
+
+Neuron 175
+Kind A
+Voltage 13
+Connection 46
+Connection 253
+Connection 424
+Connection 48
+EndNeuron
+
+Neuron 176
+Kind C
+Voltage 9
+Connection 82
+Connection 249
+Connection 316
+EndNeuron
+
+Neuron 177
+Kind B
+Voltage 22
+Connection 375
+Connection 185
+Connection 477
+EndNeuron
+
+Neuron 178
+Kind A
+Voltage 18
+Connection 20
+Connection 101
+Connection 162
+EndNeuron
+
+Neuron 179
+Kind B
+Voltage 13
+Connection 1
+Connection 93
+Connection 234
+EndNeuron
+
+Neuron 180
+Kind B
+Voltage 22
+Connection 207
+Connection 422
+Connection 67
+Connection 364
+EndNeuron
+
+Neuron 181
+Kind C
+Voltage 9
+Connection 217
+Connection 256
+Connection 281
+EndNeuron
+
+Neuron 182
+Kind C
+Voltage 11
+Connection 32
+Connection 111
+Connection 54
+Connection 491
+Connection 168
+EndNeuron
+
+Neuron 183
+Kind B
+Voltage 8
+Connection 388
+Connection 471
+Connection 472
+EndNeuron
+
+Neuron 184
+Kind C
+Voltage 15
+Connection 93
+Connection 443
+Connection 364
+Connection 37
+EndNeuron
+
+Neuron 185
+Kind C
+Voltage 11
+Connection 146
+Connection 168
+Connection 496
+EndNeuron
+
+Neuron 186
+Kind A
+Voltage 13
+Connection 270
+Connection 262
+Connection 228
+Connection 292
+EndNeuron
+
+Neuron 187
+Kind B
+Voltage 22
+Connection 375
+Connection 436
+Connection 137
+EndNeuron
+
+Neuron 188
+Kind C
+Voltage 21
+Connection 129
+Connection 443
+Connection 338
+EndNeuron
+
+Neuron 189
+Kind B
+Voltage 22
+Connection 165
+Connection 1
+Connection 303
+EndNeuron
+
+Neuron 190
+Kind C
+Voltage 21
+Connection 286
+Connection 38
+Connection 130
+Connection 31
+Connection 467
+EndNeuron
+
+Neuron 191
+Kind B
+Voltage 18
+Connection 96
+Connection 14
+Connection 332
+Connection 164
+Connection 401
+EndNeuron
+
+Neuron 192
+Kind A
+Voltage 7
+Connection 5
+Connection 300
+Connection 422
+EndNeuron
+
+Neuron 193
+Kind B
+Voltage 18
+Connection 344
+Connection 163
+Connection 212
+EndNeuron
+
+Neuron 194
+Kind C
+Voltage 19
+Connection 410
+Connection 330
+Connection 469
+Connection 265
+Connection 199
+EndNeuron
+
+Neuron 195
+Kind C
+Voltage 21
+Connection 54
+Connection 227
+Connection 468
+Connection 156
+EndNeuron
+
+Neuron 196
+Kind A
+Voltage 7
+Connection 442
+Connection 329
+Connection 472
+EndNeuron
+
+Neuron 197
+Kind A
+Voltage 11
+Connection 265
+Connection 331
+Connection 329
+EndNeuron
+
+Neuron 198
+Kind A
+Voltage 8
+Connection 154
+Connection 135
+Connection 475
+Connection 37
+Connection 132
+EndNeuron
+
+Neuron 199
+Kind A
+Voltage 11
+Connection 453
+Connection 331
+Connection 354
+Connection 499
+EndNeuron
+
+Neuron 200
+Kind C
+Voltage 13
+Connection 71
+Connection 277
+Connection 418
+Connection 250
+EndNeuron
+
+Neuron 201
+Kind B
+Voltage 8
+Connection 287
+Connection 304
+Connection 251
+Connection 436
+Connection 209
+EndNeuron
+
+Neuron 202
+Kind B
+Voltage 12
+Connection 273
+Connection 21
+Connection 163
+Connection 205
+Connection 161
+EndNeuron
+
+Neuron 203
+Kind B
+Voltage 8
+Connection 280
+Connection 447
+Connection 475
+Connection 151
+EndNeuron
+
+Neuron 204
+Kind C
+Voltage 13
+Connection 18
+Connection 433
+Connection 200
+Connection 327
+Connection 428
+EndNeuron
+
+Neuron 205
+Kind C
+Voltage 15
+Connection 382
+Connection 46
+Connection 407
+Connection 467
+EndNeuron
+
+Neuron 206
+Kind C
+Voltage 15
+Connection 342
+Connection 391
+Connection 282
+EndNeuron
+
+Neuron 207
+Kind B
+Voltage 17
+Connection 181
+Connection 7
+Connection 462
+Connection 300
+EndNeuron
+
+Neuron 208
+Kind B
+Voltage 7
+Connection 236
+Connection 167
+Connection 50
+Connection 241
+EndNeuron
+
+Neuron 209
+Kind B
+Voltage 17
+Connection 195
+Connection 335
+Connection 80
+EndNeuron
+
+Neuron 210
+Kind A
+Voltage 13
+Connection 313
+Connection 89
+Connection 416
+Connection 161
+EndNeuron
+
+Neuron 211
+Kind A
+Voltage 22
+Connection 296
+Connection 10
+Connection 499
+Connection 322
+Connection 182
+EndNeuron
+
+Neuron 212
+Kind A
+Voltage 10
+Connection 324
+Connection 459
+Connection 450
+EndNeuron
+
+Neuron 213
+Kind A
+Voltage 16
+Connection 136
+Connection 386
+Connection 499
+EndNeuron
+
+Neuron 214
+Kind C
+Voltage 11
+Connection 66
+Connection 47
+Connection 287
+Connection 407
+Connection 361
+EndNeuron
+
+Neuron 215
+Kind A
+Voltage 13
+Connection 307
+Connection 66
+Connection 365
+Connection 70
+EndNeuron
+
+Neuron 216
+Kind C
+Voltage 13
+Connection 353
+Connection 52
+Connection 249
+EndNeuron
+
+Neuron 217
+Kind A
+Voltage 18
+Connection 347
+Connection 205
+Connection 372
+Connection 337
+Connection 466
+EndNeuron
+
+Neuron 218
+Kind A
+Voltage 18
+Connection 403
+Connection 17
+Connection 230
+Connection 471
+EndNeuron
+
+Neuron 219
+Kind C
+Voltage 9
+Connection 367
+Connection 467
+Connection 442
+Connection 286
+EndNeuron
+
+Neuron 220
+Kind C
+Voltage 13
+Connection 472
+Connection 233
+Connection 349
+Connection 70
+Connection 159
+EndNeuron
+
+Neuron 221
+Kind C
+Voltage 15
+Connection 269
+Connection 284
+Connection 452
+Connection 367
+Connection 211
+EndNeuron
+
+Neuron 222
+Kind B
+Voltage 18
+Connection 399
+Connection 448
+Connection 213
+EndNeuron
+
+Neuron 223
+Kind C
+Voltage 21
+Connection 272
+Connection 452
+Connection 491
+Connection 458
+EndNeuron
+
+Neuron 224
+Kind B
+Voltage 7
+Connection 195
+Connection 279
+Connection 391
+EndNeuron
+
+Neuron 225
+Kind A
+Voltage 18
+Connection 260
+Connection 468
+Connection 464
+Connection 35
+EndNeuron
+
+Neuron 226
+Kind C
+Voltage 17
+Connection 35
+Connection 83
+Connection 20
+Connection 139
+Connection 499
+EndNeuron
+
+Neuron 227
+Kind C
+Voltage 15
+Connection 367
+Connection 419
+Connection 344
+Connection 252
+EndNeuron
+
+Neuron 228
+Kind C
+Voltage 15
+Connection 417
+Connection 183
+Connection 311
+EndNeuron
+
+Neuron 229
+Kind B
+Voltage 7
+Connection 318
+Connection 29
+Connection 186
+Connection 286
+Connection 170
+EndNeuron
+
+Neuron 230
+Kind A
+Voltage 16
+Connection 495
+Connection 17
+Connection 16
+Connection 128
+EndNeuron
+
+Neuron 231
+Kind C
+Voltage 21
+Connection 177
+Connection 425
+Connection 299
+EndNeuron
+
+Neuron 232
+Kind A
+Voltage 10
+Connection 428
+Connection 17
+Connection 294
+Connection 402
+EndNeuron
+
+Neuron 233
+Kind C
+Voltage 21
+Connection 432
+Connection 260
+Connection 52
+Connection 178
+EndNeuron
+
+Neuron 234
+Kind B
+Voltage 18
+Connection 356
+Connection 108
+Connection 312
+Connection 469
+Connection 58
+EndNeuron
+
+Neuron 235
+Kind A
+Voltage 11
+Connection 125
+Connection 52
+Connection 395
+EndNeuron
+
+Neuron 236
+Kind A
+Voltage 10
+Connection 254
+Connection 380
+Connection 38
+Connection 292
+Connection 347
+EndNeuron
+
+Neuron 237
+Kind B
+Voltage 18
+Connection 26
+Connection 182
+Connection 133
+Connection 225
+EndNeuron
+
+Neuron 238
+Kind C
+Voltage 17
+Connection 362
+Connection 384
+Connection 47
+EndNeuron
+
+Neuron 239
+Kind C
+Voltage 13
+Connection 4
+Connection 208
+Connection 153
+Connection 102
+Connection 441
+EndNeuron
+
+Neuron 240
+Kind C
+Voltage 9
+Connection 97
+Connection 362
+Connection 95
+EndNeuron
+
+Neuron 241
+Kind A
+Voltage 18
+Connection 336
+Connection 365
+Connection 274
+EndNeuron
+
+Neuron 242
+Kind C
+Voltage 15
+Connection 170
+Connection 28
+Connection 299
+Connection 147
+Connection 42
+EndNeuron
+
+Neuron 243
+Kind A
+Voltage 11
+Connection 66
+Connection 164
+Connection 357
+EndNeuron
+
+Neuron 244
+Kind B
+Voltage 7
+Connection 169
+Connection 306
+Connection 469
+Connection 387
+EndNeuron
+
+Neuron 245
+Kind C
+Voltage 15
+Connection 130
+Connection 269
+Connection 110
+Connection 166
+Connection 232
+EndNeuron
+
+Neuron 246
+Kind B
+Voltage 17
+Connection 292
+Connection 396
+Connection 311
+Connection 219
+Connection 144
+EndNeuron
+
+Neuron 247
+Kind B
+Voltage 13
+Connection 404
+Connection 484
+Connection 157
+EndNeuron
+
+Neuron 248
+Kind C
+Voltage 17
+Connection 404
+Connection 231
+Connection 248
+Connection 193
+Connection 105
+EndNeuron
+
+Neuron 249
+Kind B
+Voltage 8
+Connection 98
+Connection 153
+Connection 203
+EndNeuron
+
+Neuron 250
+Kind A
+Voltage 11
+Connection 74
+Connection 434
+Connection 23
+Connection 265
+Connection 103
+EndNeuron
+
+Neuron 251
+Kind B
+Voltage 7
+Connection 192
+Connection 408
+Connection 132
+Connection 390
+Connection 22
+EndNeuron
+
+Neuron 252
+Kind B
+Voltage 17
+Connection 481
+Connection 143
+Connection 373
+Connection 185
+EndNeuron
+
+Neuron 253
+Kind A
+Voltage 8
+Connection 423
+Connection 318
+Connection 3
+Connection 57
+Connection 210
+EndNeuron
+
+Neuron 254
+Kind B
+Voltage 8
+Connection 348
+Connection 254
+Connection 139
+EndNeuron
+
+Neuron 255
+Kind C
+Voltage 11
+Connection 387
+Connection 288
+Connection 148
+Connection 119
+Connection 432
+EndNeuron
+
+Neuron 256
+Kind A
+Voltage 7
+Connection 202
+Connection 461
+Connection 466
+Connection 111
+EndNeuron
+
+Neuron 257
+Kind C
+Voltage 21
+Connection 254
+Connection 225
+Connection 291
+Connection 371
+EndNeuron
+
+Neuron 258
+Kind B
+Voltage 7
+Connection 354
+Connection 173
+Connection 10
+EndNeuron
+
+Neuron 259
+Kind A
+Voltage 8
+Connection 431
+Connection 150
+Connection 330
+EndNeuron
+
+Neuron 260
+Kind A
+Voltage 10
+Connection 40
+Connection 85
+Connection 113
+Connection 444
+EndNeuron
+
+Neuron 261
+Kind C
+Voltage 13
+Connection 294
+Connection 84
+Connection 372
+Connection 270
+EndNeuron
+
+Neuron 262
+Kind C
+Voltage 13
+Connection 53
+Connection 83
+Connection 259
+EndNeuron
+
+Neuron 263
+Kind B
+Voltage 7
+Connection 317
+Connection 346
+Connection 364
+EndNeuron
+
+Neuron 264
+Kind A
+Voltage 13
+Connection 270
+Connection 47
+Connection 166
+Connection 76
+Connection 233
+EndNeuron
+
+Neuron 265
+Kind C
+Voltage 13
+Connection 26
+Connection 328
+Connection 0
+EndNeuron
+
+Neuron 266
+Kind C
+Voltage 17
+Connection 226
+Connection 135
+Connection 282
+Connection 469
+Connection 420
+EndNeuron
+
+Neuron 267
+Kind A
+Voltage 10
+Connection 336
+Connection 255
+Connection 29
+EndNeuron
+
+Neuron 268
+Kind A
+Voltage 7
+Connection 359
+Connection 176
+Connection 277
+Connection 345
+EndNeuron
+
+Neuron 269
+Kind C
+Voltage 17
+Connection 275
+Connection 369
+Connection 193
+EndNeuron
+
+Neuron 270
+Kind A
+Voltage 10
+Connection 249
+Connection 124
+Connection 439
+Connection 403
+Connection 449
+EndNeuron
+
+Neuron 271
+Kind A
+Voltage 18
+Connection 295
+Connection 182
+Connection 405
+EndNeuron
+
+Neuron 272
+Kind C
+Voltage 13
+Connection 476
+Connection 483
+Connection 242
+EndNeuron
+
+Neuron 273
+Kind C
+Voltage 15
+Connection 390
+Connection 127
+Connection 415
+Connection 470
+EndNeuron
+
+Neuron 274
+Kind A
+Voltage 18
+Connection 454
+Connection 232
+Connection 245
+EndNeuron
+
+Neuron 275
+Kind B
+Voltage 17
+Connection 253
+Connection 401
+Connection 144
+Connection 54
+EndNeuron
+
+Neuron 276
+Kind C
+Voltage 15
+Connection 361
+Connection 157
+Connection 399
+EndNeuron
+
+Neuron 277
+Kind C
+Voltage 7
+Connection 161
+Connection 412
+Connection 28
+EndNeuron
+
+Neuron 278
+Kind A
+Voltage 13
+Connection 445
+Connection 300
+Connection 298
+Connection 123
+Connection 157
+EndNeuron
+
+Neuron 279
+Kind C
+Voltage 7
+Connection 71
+Connection 169
+Connection 273
+Connection 345
+Connection 311
+EndNeuron
+
+Neuron 280
+Kind A
+Voltage 22
+Connection 382
+Connection 97
+Connection 175
+Connection 192
+Connection 328
+EndNeuron
+
+Neuron 281
+Kind B
+Voltage 12
+Connection 186
+Connection 110
+Connection 211
+EndNeuron
+
+Neuron 282
+Kind B
+Voltage 8
+Connection 352
+Connection 297
+Connection 347
+Connection 201
+EndNeuron
+
+Neuron 283
+Kind C
+Voltage 11
+Connection 334
+Connection 417
+Connection 382
+Connection 215
+EndNeuron
+
+Neuron 284
+Kind B
+Voltage 13
+Connection 376
+Connection 17
+Connection 130
+Connection 379
+EndNeuron
+
+Neuron 285
+Kind A
+Voltage 13
+Connection 295
+Connection 324
+Connection 158
+EndNeuron
+
+Neuron 286
+Kind B
+Voltage 17
+Connection 310
+Connection 440
+Connection 462
+EndNeuron
+
+Neuron 287
+Kind C
+Voltage 13
+Connection 281
+Connection 297
+Connection 168
+Connection 40
+Connection 224
+EndNeuron
+
+Neuron 288
+Kind C
+Voltage 19
+Connection 253
+Connection 67
+Connection 456
+Connection 141
+EndNeuron
+
+Neuron 289
+Kind B
+Voltage 8
+Connection 467
+Connection 362
+Connection 458
+Connection 469
+EndNeuron
+
+Neuron 290
+Kind A
+Voltage 22
+Connection 410
+Connection 172
+Connection 110
+Connection 408
+EndNeuron
+
+Neuron 291
+Kind A
+Voltage 7
+Connection 427
+Connection 497
+Connection 57
+EndNeuron
+
+Neuron 292
+Kind B
+Voltage 22
+Connection 346
+Connection 249
+Connection 270
+EndNeuron
+
+Neuron 293
+Kind A
+Voltage 22
+Connection 194
+Connection 83
+Connection 270
+Connection 318
+EndNeuron
+
+Neuron 294
+Kind C
+Voltage 9
+Connection 238
+Connection 134
+Connection 493
+Connection 328
+EndNeuron
+
+Neuron 295
+Kind B
+Voltage 22
+Connection 72
+Connection 138
+Connection 260
+Connection 336
+EndNeuron
+
+Neuron 296
+Kind C
+Voltage 9
+Connection 10
+Connection 236
+Connection 296
+Connection 445
+EndNeuron
+
+Neuron 297
+Kind C
+Voltage 11
+Connection 176
+Connection 19
+Connection 346
+Connection 492
+Connection 215
+EndNeuron
+
+Neuron 298
+Kind C
+Voltage 7
+Connection 479
+Connection 33
+Connection 14
+EndNeuron
+
+Neuron 299
+Kind A
+Voltage 11
+Connection 279
+Connection 476
+Connection 138
+Connection 375
+Connection 147
+EndNeuron
+
+Neuron 300
+Kind B
+Voltage 8
+Connection 49
+Connection 74
+Connection 470
+EndNeuron
+
+Neuron 301
+Kind C
+Voltage 21
+Connection 66
+Connection 347
+Connection 498
+Connection 36
+Connection 412
+EndNeuron
+
+Neuron 302
+Kind A
+Voltage 13
+Connection 164
+Connection 242
+Connection 404
+Connection 216
+EndNeuron
+
+Neuron 303
+Kind A
+Voltage 11
+Connection 59
+Connection 223
+Connection 56
+EndNeuron
+
+Neuron 304
+Kind A
+Voltage 13
+Connection 299
+Connection 327
+Connection 239
+Connection 458
+EndNeuron
+
+Neuron 305
+Kind B
+Voltage 18
+Connection 387
+Connection 391
+Connection 242
+Connection 160
+Connection 188
+EndNeuron
+
+Neuron 306
+Kind A
+Voltage 10
+Connection 0
+Connection 438
+Connection 476
+Connection 3
+Connection 67
+EndNeuron
+
+Neuron 307
+Kind A
+Voltage 16
+Connection 2
+Connection 313
+Connection 471
+Connection 481
+Connection 165
+EndNeuron
+
+Neuron 308
+Kind B
+Voltage 13
+Connection 280
+Connection 215
+Connection 318
+Connection 159
+EndNeuron
+
+Neuron 309
+Kind A
+Voltage 8
+Connection 159
+Connection 204
+Connection 212
+Connection 177
+EndNeuron
+
+Neuron 310
+Kind C
+Voltage 7
+Connection 435
+Connection 349
+Connection 447
+Connection 57
+EndNeuron
+
+Neuron 311
+Kind C
+Voltage 21
+Connection 122
+Connection 96
+Connection 48
+Connection 18
+EndNeuron
+
+Neuron 312
+Kind B
+Voltage 22
+Connection 363
+Connection 431
+Connection 389
+EndNeuron
+
+Neuron 313
+Kind B
+Voltage 18
+Connection 117
+Connection 330
+Connection 236
+EndNeuron
+
+Neuron 314
+Kind A
+Voltage 11
+Connection 243
+Connection 357
+Connection 343
+Connection 404
+EndNeuron
+
+Neuron 315
+Kind A
+Voltage 16
+Connection 352
+Connection 181
+Connection 64
+Connection 361
+Connection 311
+EndNeuron
+
+Neuron 316
+Kind C
+Voltage 21
+Connection 397
+Connection 170
+Connection 245
+Connection 442
+EndNeuron
+
+Neuron 317
+Kind C
+Voltage 19
+Connection 486
+Connection 425
+Connection 201
+Connection 295
+Connection 330
+EndNeuron
+
+Neuron 318
+Kind A
+Voltage 22
+Connection 176
+Connection 190
+Connection 301
+EndNeuron
+
+Neuron 319
+Kind C
+Voltage 11
+Connection 279
+Connection 203
+Connection 248
+Connection 455
+EndNeuron
+
+Neuron 320
+Kind A
+Voltage 7
+Connection 410
+Connection 19
+Connection 163
+Connection 457
+Connection 424
+EndNeuron
+
+Neuron 321
+Kind A
+Voltage 11
+Connection 410
+Connection 40
+Connection 278
+Connection 158
+Connection 23
+EndNeuron
+
+Neuron 322
+Kind B
+Voltage 13
+Connection 171
+Connection 89
+Connection 48
+Connection 478
+EndNeuron
+
+Neuron 323
+Kind A
+Voltage 22
+Connection 437
+Connection 458
+Connection 407
+Connection 422
+Connection 269
+EndNeuron
+
+Neuron 324
+Kind B
+Voltage 17
+Connection 498
+Connection 191
+Connection 14
+EndNeuron
+
+Neuron 325
+Kind B
+Voltage 8
+Connection 358
+Connection 482
+Connection 98
+Connection 484
+Connection 119
+EndNeuron
+
+Neuron 326
+Kind C
+Voltage 11
+Connection 414
+Connection 45
+Connection 216
+Connection 375
+Connection 219
+EndNeuron
+
+Neuron 327
+Kind B
+Voltage 17
+Connection 69
+Connection 422
+Connection 125
+Connection 239
+Connection 374
+EndNeuron
+
+Neuron 328
+Kind A
+Voltage 22
+Connection 323
+Connection 33
+Connection 388
+EndNeuron
+
+Neuron 329
+Kind C
+Voltage 13
+Connection 331
+Connection 354
+Connection 403
+EndNeuron
+
+Neuron 330
+Kind B
+Voltage 8
+Connection 315
+Connection 387
+Connection 285
+Connection 491
+EndNeuron
+
+Neuron 331
+Kind B
+Voltage 8
+Connection 462
+Connection 250
+Connection 229
+Connection 124
+Connection 330
+EndNeuron
+
+Neuron 332
+Kind C
+Voltage 19
+Connection 277
+Connection 233
+Connection 403
+Connection 472
+Connection 132
+EndNeuron
+
+Neuron 333
+Kind C
+Voltage 11
+Connection 105
+Connection 214
+Connection 175
+EndNeuron
+
+Neuron 334
+Kind C
+Voltage 17
+Connection 260
+Connection 315
+Connection 95
+Connection 45
+EndNeuron
+
+Neuron 335
+Kind A
+Voltage 10
+Connection 124
+Connection 274
+Connection 268
+EndNeuron
+
+Neuron 336
+Kind C
+Voltage 21
+Connection 131
+Connection 268
+Connection 266
+Connection 104
+EndNeuron
+
+Neuron 337
+Kind C
+Voltage 15
+Connection 228
+Connection 223
+Connection 26
+EndNeuron
+
+Neuron 338
+Kind A
+Voltage 7
+Connection 308
+Connection 226
+Connection 496
+EndNeuron
+
+Neuron 339
+Kind B
+Voltage 22
+Connection 167
+Connection 351
+Connection 396
+Connection 232
+Connection 432
+EndNeuron
+
+Neuron 340
+Kind A
+Voltage 16
+Connection 79
+Connection 463
+Connection 333
+Connection 131
+EndNeuron
+
+Neuron 341
+Kind B
+Voltage 22
+Connection 29
+Connection 272
+Connection 355
+EndNeuron
+
+Neuron 342
+Kind B
+Voltage 8
+Connection 359
+Connection 385
+Connection 362
+Connection 80
+Connection 137
+EndNeuron
+
+Neuron 343
+Kind C
+Voltage 21
+Connection 192
+Connection 391
+Connection 482
+EndNeuron
+
+Neuron 344
+Kind C
+Voltage 7
+Connection 160
+Connection 360
+Connection 64
+Connection 450
+EndNeuron
+
+Neuron 345
+Kind B
+Voltage 13
+Connection 164
+Connection 351
+Connection 226
+Connection 178
+Connection 327
+EndNeuron
+
+Neuron 346
+Kind A
+Voltage 16
+Connection 3
+Connection 6
+Connection 35
+EndNeuron
+
+Neuron 347
+Kind C
+Voltage 19
+Connection 195
+Connection 374
+Connection 169
+Connection 333
+EndNeuron
+
+Neuron 348
+Kind B
+Voltage 18
+Connection 96
+Connection 285
+Connection 264
+Connection 199
+EndNeuron
+
+Neuron 349
+Kind A
+Voltage 7
+Connection 456
+Connection 365
+Connection 401
+Connection 32
+EndNeuron
+
+Neuron 350
+Kind C
+Voltage 17
+Connection 437
+Connection 159
+Connection 105
+Connection 115
+Connection 173
+EndNeuron
+
+Neuron 351
+Kind C
+Voltage 7
+Connection 38
+Connection 489
+Connection 284
+Connection 72
+EndNeuron
+
+Neuron 352
+Kind B
+Voltage 18
+Connection 451
+Connection 452
+Connection 189
+Connection 69
+Connection 33
+EndNeuron
+
+Neuron 353
+Kind A
+Voltage 18
+Connection 39
+Connection 285
+Connection 263
+Connection 311
+EndNeuron
+
+Neuron 354
+Kind C
+Voltage 21
+Connection 409
+Connection 105
+Connection 396
+Connection 460
+EndNeuron
+
+Neuron 355
+Kind B
+Voltage 17
+Connection 187
+Connection 311
+Connection 139
+Connection 479
+EndNeuron
+
+Neuron 356
+Kind B
+Voltage 17
+Connection 42
+Connection 284
+Connection 388
+Connection 103
+Connection 402
+EndNeuron
+
+Neuron 357
+Kind C
+Voltage 15
+Connection 34
+Connection 498
+Connection 229
+Connection 169
+EndNeuron
+
+Neuron 358
+Kind C
+Voltage 13
+Connection 304
+Connection 164
+Connection 340
+Connection 142
+EndNeuron
+
+Neuron 359
+Kind C
+Voltage 21
+Connection 125
+Connection 147
+Connection 235
+Connection 339
+Connection 315
+EndNeuron
+
+Neuron 360
+Kind C
+Voltage 11
+Connection 147
+Connection 51
+Connection 221
+Connection 323
+EndNeuron
+
+Neuron 361
+Kind C
+Voltage 9
+Connection 92
+Connection 464
+Connection 333
+Connection 27
+EndNeuron
+
+Neuron 362
+Kind A
+Voltage 13
+Connection 342
+Connection 305
+Connection 273
+Connection 160
+Connection 178
+EndNeuron
+
+Neuron 363
+Kind C
+Voltage 9
+Connection 362
+Connection 52
+Connection 451
+EndNeuron
+
+Neuron 364
+Kind C
+Voltage 7
+Connection 144
+Connection 184
+Connection 247
+Connection 92
+Connection 344
+EndNeuron
+
+Neuron 365
+Kind A
+Voltage 10
+Connection 144
+Connection 228
+Connection 448
+EndNeuron
+
+Neuron 366
+Kind A
+Voltage 22
+Connection 458
+Connection 490
+Connection 158
+Connection 40
+EndNeuron
+
+Neuron 367
+Kind B
+Voltage 8
+Connection 184
+Connection 380
+Connection 207
+EndNeuron
+
+Neuron 368
+Kind A
+Voltage 22
+Connection 105
+Connection 352
+Connection 5
+EndNeuron
+
+Neuron 369
+Kind B
+Voltage 13
+Connection 281
+Connection 229
+Connection 442
+EndNeuron
+
+Neuron 370
+Kind C
+Voltage 17
+Connection 451
+Connection 71
+Connection 119
+Connection 306
+EndNeuron
+
+Neuron 371
+Kind B
+Voltage 13
+Connection 404
+Connection 491
+Connection 475
+Connection 219
+EndNeuron
+
+Neuron 372
+Kind C
+Voltage 19
+Connection 356
+Connection 483
+Connection 332
+Connection 18
+EndNeuron
+
+Neuron 373
+Kind C
+Voltage 13
+Connection 317
+Connection 428
+Connection 85
+EndNeuron
+
+Neuron 374
+Kind A
+Voltage 13
+Connection 169
+Connection 478
+Connection 114
+EndNeuron
+
+Neuron 375
+Kind C
+Voltage 13
+Connection 170
+Connection 261
+Connection 200
+Connection 483
+EndNeuron
+
+Neuron 376
+Kind A
+Voltage 7
+Connection 31
+Connection 342
+Connection 256
+EndNeuron
+
+Neuron 377
+Kind B
+Voltage 12
+Connection 342
+Connection 169
+Connection 96
+EndNeuron
+
+Neuron 378
+Kind B
+Voltage 17
+Connection 202
+Connection 221
+Connection 209
+Connection 126
+Connection 162
+EndNeuron
+
+Neuron 379
+Kind B
+Voltage 7
+Connection 336
+Connection 207
+Connection 11
+Connection 314
+EndNeuron
+
+Neuron 380
+Kind C
+Voltage 15
+Connection 266
+Connection 496
+Connection 212
+Connection 321
+Connection 78
+EndNeuron
+
+Neuron 381
+Kind B
+Voltage 7
+Connection 484
+Connection 237
+Connection 41
+Connection 35
+EndNeuron
+
+Neuron 382
+Kind B
+Voltage 13
+Connection 130
+Connection 77
+Connection 428
+Connection 297
+Connection 123
+EndNeuron
+
+Neuron 383
+Kind B
+Voltage 17
+Connection 86
+Connection 146
+Connection 200
+EndNeuron
+
+Neuron 384
+Kind C
+Voltage 21
+Connection 271
+Connection 245
+Connection 61
+EndNeuron
+
+Neuron 385
+Kind B
+Voltage 8
+Connection 328
+Connection 24
+Connection 38
+Connection 256
+EndNeuron
+
+Neuron 386
+Kind C
+Voltage 11
+Connection 144
+Connection 27
+Connection 176
+EndNeuron
+
+Neuron 387
+Kind B
+Voltage 22
+Connection 348
+Connection 210
+Connection 65
+Connection 82
+EndNeuron
+
+Neuron 388
+Kind B
+Voltage 13
+Connection 416
+Connection 387
+Connection 93
+Connection 105
+Connection 159
+EndNeuron
+
+Neuron 389
+Kind C
+Voltage 7
+Connection 94
+Connection 282
+Connection 71
+EndNeuron
+
+Neuron 390
+Kind A
+Voltage 7
+Connection 31
+Connection 452
+Connection 360
+EndNeuron
+
+Neuron 391
+Kind A
+Voltage 10
+Connection 53
+Connection 387
+Connection 110
+Connection 309
+Connection 434
+EndNeuron
+
+Neuron 392
+Kind B
+Voltage 7
+Connection 257
+Connection 294
+Connection 286
+Connection 397
+EndNeuron
+
+Neuron 393
+Kind B
+Voltage 12
+Connection 237
+Connection 400
+Connection 355
+EndNeuron
+
+Neuron 394
+Kind B
+Voltage 7
+Connection 172
+Connection 117
+Connection 172
+EndNeuron
+
+Neuron 395
+Kind C
+Voltage 7
+Connection 78
+Connection 257
+Connection 271
+EndNeuron
+
+Neuron 396
+Kind C
+Voltage 21
+Connection 2
+Connection 466
+Connection 137
+Connection 113
+Connection 212
+EndNeuron
+
+Neuron 397
+Kind B
+Voltage 13
+Connection 204
+Connection 19
+Connection 84
+EndNeuron
+
+Neuron 398
+Kind A
+Voltage 10
+Connection 396
+Connection 460
+Connection 171
+Connection 416
+Connection 103
+EndNeuron
+
+Neuron 399
+Kind A
+Voltage 11
+Connection 412
+Connection 133
+Connection 385
+EndNeuron
+
+Neuron 400
+Kind A
+Voltage 7
+Connection 480
+Connection 452
+Connection 122
+EndNeuron
+
+Neuron 401
+Kind B
+Voltage 7
+Connection 241
+Connection 374
+Connection 53
+EndNeuron
+
+Neuron 402
+Kind B
+Voltage 7
+Connection 128
+Connection 56
+Connection 198
+Connection 354
+EndNeuron
+
+Neuron 403
+Kind A
+Voltage 10
+Connection 269
+Connection 226
+Connection 291
+EndNeuron
+
+Neuron 404
+Kind A
+Voltage 8
+Connection 3
+Connection 499
+Connection 212
+Connection 249
+Connection 11
+EndNeuron
+
+Neuron 405
+Kind A
+Voltage 13
+Connection 496
+Connection 244
+Connection 287
+Connection 86
+Connection 65
+EndNeuron
+
+Neuron 406
+Kind A
+Voltage 7
+Connection 341
+Connection 317
+Connection 135
+EndNeuron
+
+Neuron 407
+Kind A
+Voltage 22
+Connection 75
+Connection 12
+Connection 86
+Connection 107
+EndNeuron
+
+Neuron 408
+Kind B
+Voltage 7
+Connection 302
+Connection 66
+Connection 197
+EndNeuron
+
+Neuron 409
+Kind C
+Voltage 13
+Connection 398
+Connection 293
+Connection 301
+EndNeuron
+
+Neuron 410
+Kind A
+Voltage 7
+Connection 69
+Connection 93
+Connection 412
+EndNeuron
+
+Neuron 411
+Kind B
+Voltage 22
+Connection 99
+Connection 406
+Connection 122
+Connection 409
+Connection 300
+EndNeuron
+
+Neuron 412
+Kind B
+Voltage 22
+Connection 341
+Connection 114
+Connection 43
+Connection 213
+EndNeuron
+
+Neuron 413
+Kind C
+Voltage 21
+Connection 130
+Connection 247
+Connection 7
+Connection 460
+EndNeuron
+
+Neuron 414
+Kind A
+Voltage 18
+Connection 76
+Connection 348
+Connection 16
+Connection 429
+EndNeuron
+
+Neuron 415
+Kind A
+Voltage 10
+Connection 468
+Connection 285
+Connection 114
+EndNeuron
+
+Neuron 416
+Kind B
+Voltage 22
+Connection 193
+Connection 43
+Connection 17
+Connection 334
+EndNeuron
+
+Neuron 417
+Kind A
+Voltage 18
+Connection 217
+Connection 94
+Connection 308
+EndNeuron
+
+Neuron 418
+Kind C
+Voltage 11
+Connection 62
+Connection 110
+Connection 176
+Connection 313
+EndNeuron
+
+Neuron 419
+Kind A
+Voltage 18
+Connection 134
+Connection 342
+Connection 59
+Connection 52
+EndNeuron
+
+Neuron 420
+Kind C
+Voltage 15
+Connection 422
+Connection 321
+Connection 162
+EndNeuron
+
+Neuron 421
+Kind A
+Voltage 18
+Connection 298
+Connection 28
+Connection 416
+Connection 272
+Connection 69
+EndNeuron
+
+Neuron 422
+Kind A
+Voltage 11
+Connection 176
+Connection 318
+Connection 449
+EndNeuron
+
+Neuron 423
+Kind C
+Voltage 21
+Connection 114
+Connection 79
+Connection 249
+Connection 305
+EndNeuron
+
+Neuron 424
+Kind C
+Voltage 9
+Connection 293
+Connection 494
+Connection 402
+Connection 102
+EndNeuron
+
+Neuron 425
+Kind B
+Voltage 17
+Connection 200
+Connection 481
+Connection 474
+Connection 150
+Connection 311
+EndNeuron
+
+Neuron 426
+Kind B
+Voltage 13
+Connection 443
+Connection 137
+Connection 225
+EndNeuron
+
+Neuron 427
+Kind B
+Voltage 7
+Connection 266
+Connection 356
+Connection 398
+Connection 408
+EndNeuron
+
+Neuron 428
+Kind A
+Voltage 8
+Connection 69
+Connection 107
+Connection 204
+Connection 291
+EndNeuron
+
+Neuron 429
+Kind C
+Voltage 19
+Connection 20
+Connection 226
+Connection 478
+Connection 499
+Connection 417
+EndNeuron
+
+Neuron 430
+Kind C
+Voltage 7
+Connection 122
+Connection 105
+Connection 126
+EndNeuron
+
+Neuron 431
+Kind B
+Voltage 7
+Connection 161
+Connection 76
+Connection 24
+Connection 244
+Connection 28
+EndNeuron
+
+Neuron 432
+Kind A
+Voltage 7
+Connection 410
+Connection 397
+Connection 81
+Connection 128
+Connection 345
+EndNeuron
+
+Neuron 433
+Kind A
+Voltage 11
+Connection 137
+Connection 228
+Connection 481
+Connection 277
+EndNeuron
+
+Neuron 434
+Kind C
+Voltage 9
+Connection 284
+Connection 72
+Connection 160
+Connection 446
+EndNeuron
+
+Neuron 435
+Kind B
+Voltage 22
+Connection 302
+Connection 45
+Connection 346
+Connection 333
+EndNeuron
+
+Neuron 436
+Kind B
+Voltage 22
+Connection 191
+Connection 157
+Connection 457
+Connection 375
+Connection 459
+EndNeuron
+
+Neuron 437
+Kind C
+Voltage 9
+Connection 420
+Connection 166
+Connection 105
+Connection 98
+EndNeuron
+
+Neuron 438
+Kind A
+Voltage 7
+Connection 291
+Connection 25
+Connection 167
+Connection 467
+Connection 334
+EndNeuron
+
+Neuron 439
+Kind A
+Voltage 18
+Connection 93
+Connection 417
+Connection 115
+Connection 364
+EndNeuron
+
+Neuron 440
+Kind B
+Voltage 7
+Connection 213
+Connection 375
+Connection 122
+EndNeuron
+
+Neuron 441
+Kind A
+Voltage 16
+Connection 55
+Connection 438
+Connection 460
+EndNeuron
+
+Neuron 442
+Kind C
+Voltage 15
+Connection 92
+Connection 347
+Connection 452
+EndNeuron
+
+Neuron 443
+Kind A
+Voltage 8
+Connection 87
+Connection 221
+Connection 128
+Connection 190
+EndNeuron
+
+Neuron 444
+Kind A
+Voltage 8
+Connection 87
+Connection 65
+Connection 468
+Connection 228
+EndNeuron
+
+Neuron 445
+Kind C
+Voltage 13
+Connection 119
+Connection 318
+Connection 84
+EndNeuron
+
+Neuron 446
+Kind C
+Voltage 13
+Connection 28
+Connection 74
+Connection 258
+Connection 277
+Connection 471
+EndNeuron
+
+Neuron 447
+Kind B
+Voltage 8
+Connection 160
+Connection 360
+Connection 325
+Connection 440
+EndNeuron
+
+Neuron 448
+Kind C
+Voltage 17
+Connection 225
+Connection 263
+Connection 224
+Connection 434
+EndNeuron
+
+Neuron 449
+Kind C
+Voltage 17
+Connection 236
+Connection 159
+Connection 142
+EndNeuron
+
+Neuron 450
+Kind B
+Voltage 13
+Connection 139
+Connection 115
+Connection 486
+EndNeuron
+
+Neuron 451
+Kind C
+Voltage 19
+Connection 366
+Connection 32
+Connection 496
+Connection 471
+EndNeuron
+
+Neuron 452
+Kind C
+Voltage 7
+Connection 23
+Connection 284
+Connection 79
+Connection 319
+EndNeuron
+
+Neuron 453
+Kind A
+Voltage 18
+Connection 169
+Connection 458
+Connection 112
+EndNeuron
+
+Neuron 454
+Kind B
+Voltage 8
+Connection 390
+Connection 236
+Connection 154
+EndNeuron
+
+Neuron 455
+Kind B
+Voltage 12
+Connection 350
+Connection 449
+Connection 190
+Connection 335
+Connection 233
+EndNeuron
+
+Neuron 456
+Kind C
+Voltage 19
+Connection 15
+Connection 497
+Connection 12
+Connection 496
+Connection 17
+EndNeuron
+
+Neuron 457
+Kind C
+Voltage 19
+Connection 198
+Connection 351
+Connection 254
+Connection 454
+Connection 50
+EndNeuron
+
+Neuron 458
+Kind A
+Voltage 10
+Connection 54
+Connection 28
+Connection 296
+Connection 14
+EndNeuron
+
+Neuron 459
+Kind A
+Voltage 22
+Connection 72
+Connection 52
+Connection 344
+Connection 225
+EndNeuron
+
+Neuron 460
+Kind C
+Voltage 7
+Connection 95
+Connection 53
+Connection 0
+Connection 165
+Connection 449
+EndNeuron
+
+Neuron 461
+Kind C
+Voltage 9
+Connection 234
+Connection 133
+Connection 130
+Connection 134
+Connection 380
+EndNeuron
+
+Neuron 462
+Kind C
+Voltage 11
+Connection 22
+Connection 123
+Connection 389
+Connection 17
+EndNeuron
+
+Neuron 463
+Kind A
+Voltage 13
+Connection 20
+Connection 182
+Connection 295
+EndNeuron
+
+Neuron 464
+Kind B
+Voltage 12
+Connection 167
+Connection 402
+Connection 57
+Connection 42
+EndNeuron
+
+Neuron 465
+Kind C
+Voltage 11
+Connection 81
+Connection 296
+Connection 72
+EndNeuron
+
+Neuron 466
+Kind C
+Voltage 7
+Connection 496
+Connection 121
+Connection 410
+EndNeuron
+
+Neuron 467
+Kind C
+Voltage 11
+Connection 258
+Connection 142
+Connection 382
+Connection 199
+Connection 130
+EndNeuron
+
+Neuron 468
+Kind B
+Voltage 17
+Connection 339
+Connection 410
+Connection 212
+EndNeuron
+
+Neuron 469
+Kind C
+Voltage 9
+Connection 118
+Connection 231
+Connection 194
+EndNeuron
+
+Neuron 470
+Kind A
+Voltage 10
+Connection 131
+Connection 16
+Connection 232
+Connection 76
+Connection 53
+EndNeuron
+
+Neuron 471
+Kind A
+Voltage 16
+Connection 353
+Connection 86
+Connection 448
+Connection 108
+EndNeuron
+
+Neuron 472
+Kind A
+Voltage 8
+Connection 340
+Connection 311
+Connection 387
+Connection 259
+Connection 214
+EndNeuron
+
+Neuron 473
+Kind C
+Voltage 13
+Connection 484
+Connection 72
+Connection 137
+EndNeuron
+
+Neuron 474
+Kind B
+Voltage 18
+Connection 24
+Connection 268
+Connection 427
+Connection 288
+EndNeuron
+
+Neuron 475
+Kind A
+Voltage 18
+Connection 479
+Connection 456
+Connection 95
+Connection 429
+EndNeuron
+
+Neuron 476
+Kind C
+Voltage 11
+Connection 166
+Connection 139
+Connection 21
+Connection 357
+Connection 209
+EndNeuron
+
+Neuron 477
+Kind B
+Voltage 8
+Connection 48
+Connection 154
+Connection 127
+Connection 426
+Connection 134
+EndNeuron
+
+Neuron 478
+Kind C
+Voltage 19
+Connection 151
+Connection 47
+Connection 149
+EndNeuron
+
+Neuron 479
+Kind B
+Voltage 12
+Connection 88
+Connection 194
+Connection 245
+Connection 324
+EndNeuron
+
+Neuron 480
+Kind A
+Voltage 8
+Connection 266
+Connection 465
+Connection 425
+Connection 216
+Connection 155
+EndNeuron
+
+Neuron 481
+Kind B
+Voltage 18
+Connection 440
+Connection 471
+Connection 498
+EndNeuron
+
+Neuron 482
+Kind B
+Voltage 13
+Connection 296
+Connection 359
+Connection 165
+Connection 386
+Connection 367
+EndNeuron
+
+Neuron 483
+Kind C
+Voltage 19
+Connection 42
+Connection 214
+Connection 126
+EndNeuron
+
+Neuron 484
+Kind C
+Voltage 19
+Connection 47
+Connection 478
+Connection 293
+EndNeuron
+
+Neuron 485
+Kind A
+Voltage 7
+Connection 55
+Connection 132
+Connection 282
+Connection 342
+EndNeuron
+
+Neuron 486
+Kind C
+Voltage 7
+Connection 209
+Connection 198
+Connection 414
+Connection 465
+Connection 160
+EndNeuron
+
+Neuron 487
+Kind B
+Voltage 8
+Connection 360
+Connection 499
+Connection 261
+EndNeuron
+
+Neuron 488
+Kind A
+Voltage 10
+Connection 163
+Connection 399
+Connection 132
+Connection 133
+EndNeuron
+
+Neuron 489
+Kind C
+Voltage 17
+Connection 400
+Connection 162
+Connection 12
+EndNeuron
+
+Neuron 490
+Kind C
+Voltage 21
+Connection 142
+Connection 50
+Connection 133
+Connection 379
+EndNeuron
+
+Neuron 491
+Kind A
+Voltage 13
+Connection 28
+Connection 13
+Connection 62
+Connection 231
+Connection 177
+EndNeuron
+
+Neuron 492
+Kind A
+Voltage 8
+Connection 371
+Connection 334
+Connection 484
+Connection 249
+Connection 52
+EndNeuron
+
+Neuron 493
+Kind B
+Voltage 8
+Connection 272
+Connection 410
+Connection 223
+EndNeuron
+
+Neuron 494
+Kind A
+Voltage 7
+Connection 59
+Connection 364
+Connection 79
+Connection 67
+Connection 318
+EndNeuron
+
+Neuron 495
+Kind C
+Voltage 9
+Connection 470
+Connection 373
+Connection 260
+Connection 137
+Connection 61
+EndNeuron
+
+Neuron 496
+Kind A
+Voltage 8
+Connection 98
+Connection 426
+Connection 166
+EndNeuron
+
+Neuron 497
+Kind A
+Voltage 8
+Connection 382
+Connection 491
+Connection 356
+EndNeuron
+
+Neuron 498
+Kind C
+Voltage 13
+Connection 14
+Connection 452
+Connection 470
+EndNeuron
+
+Neuron 499
+Kind C
+Voltage 17
+Connection 168
+Connection 433
+Connection 194
+Connection 412
+Connection 428
+EndNeuron
+
