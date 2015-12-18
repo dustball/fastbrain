@@ -96,5 +96,5 @@ The program will automatically generate Graphviz visualizations for the neural n
 
 This is a real, working neural network.  The mouse will find the cheese 100% of the time.  This network was built by 4,174 generations of mice.  
 
-![500neuron.v4174](output/mouse.brain.500neuron.v4174.svg?raw=true "500neuron.v4174")
+![500neuron.v4174](https://cdn.rawgit.com/dustball/fastbrain/master/output/mouse.brain.500neuron.v4174.svg "500neuron.v4174")
 
