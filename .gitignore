@@ -4,3 +4,9 @@ fastbrain.debug*
 *.orig
 ./mouse.brain*
 fastbrain.dSYM
+Notes
+bak/
+out/
+legend/
+.DS_Store
+
